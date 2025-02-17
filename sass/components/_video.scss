@@ -1,0 +1,17 @@
+@use "../abstracts" as a;
+
+:root {
+  --plyr-color-main: a.$primaryColor;
+  --plyr-control-icon-size: 15px;
+  --plyr-control-radius: 20px;
+  --plyr-control-family: a.$primaryFont;
+  --plyr-control-spacing: 15px;
+}
+
+#video-section {
+  margin: 30px auto;
+}
+
+#player-container {
+  margin: 20px;
+}

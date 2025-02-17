@@ -1,0 +1,102 @@
+@use "../abstracts" as a;
+@use "../abstracts/mixins" as m;
+
+nav {
+  display: flex;
+  padding: 2% 4%;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    width: 250px;
+  }
+
+  .nav-links {
+    flex: 1;
+    text-align: right;
+    position: fixed;
+    background: #f44336;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    z-index: 2;
+    transition: 1s;
+
+    ul {
+      padding: 30px;
+
+      li {
+        list-style: none;
+        display: block;
+        padding: 8px 12px;
+        position: relative;
+
+        a {
+          color: #fff;
+          text-decoration: none;
+          font-size: 14px;
+        }
+
+        &::after {
+          content: "";
+          width: 0%;
+          height: 2px;
+          background: #f44336;
+          display: block;
+          margin: auto;
+          transition: 0.05s;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .fa {
+    display: block;
+    color: #fff;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    .nav-links {
+      position: static;
+      background: transparent;
+      height: auto;
+      width: auto;
+      text-align: right;
+
+      ul {
+        li {
+          display: inline-block;
+          a {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .fa {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  nav {
+    img {
+      width: 350px;
+    }
+    .nav-links ul li a {
+      font-size: 20px;
+    }
+  }
+}

@@ -1,7 +1,15 @@
-@use 'colors' as c; 
-@use 'fonts' as f;  
+@use "colors" as c;
+@use "fonts" as f;
 
-@mixin cta-buttons{
-   
+@mixin cta-buttons {
 }
 
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin transition($property: all, $duration: 0.3s, $timing: ease-in-out) {
+  transition: $property $duration $timing;
+}

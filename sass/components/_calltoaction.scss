@@ -1,0 +1,27 @@
+@use "../abstracts" as a;
+@use "../abstracts/mixins" as m;
+
+.cta {
+  margin: 20px auto;
+  width: 95%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../images/pose_reference4.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  text-align: center;
+  padding: 100px 0;
+
+  h1 {
+    color: #fff;
+    margin-bottom: 40px;
+    padding: 0;
+    font-size: 24px; // Default for smaller screens
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .cta h1 {
+    font-size: 38px;
+  }
+}
