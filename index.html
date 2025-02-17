@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Brother's In Arms Memorial</title>
-    <!-- <link href="images/logo-flower.svg" rel="icon" type="image/svg+xml" /> -->
     <link
       rel="icon"
       type="image/png"
@@ -23,28 +22,34 @@
     <link href="css/reset.css" rel="stylesheet" />
     <link href="css/grid.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <!-- Plyr -->
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
   </head>
   <body>
     <section class="header">
       <nav>
-        <a href="index.html"><img src="images/Asset 5.svg" alt="" /></a>
+        <a href="index.html"
+          ><img src="images/logo-flower-02.svg" alt="Brothers In Arms Logo"
+        /></a>
         <div class="nav-links" id="navLinks">
           <i class="fa fa-times" onclick="hideMenu()"></i>
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="Donation.html">Donation</a></li>
+            <li><a href="history_stories.html">History &amp; Stories</a></li>
+            <li><a href="victoriacrosses.html">Victoria Crosses</a></li>
+            <li><a href="donors.html">Donors</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
@@ -53,49 +58,82 @@
 
       <div class="text-box">
         <h1>Where Heros Rest, History Lives</h1>
-        <p>Preserving the valor that shaped our world</p>
-        <a href="Donation.html" class="hero-btn">Donate To Preserve History</a>
+        <p>Forever Grateful – For Freedom, Sacrifice &amp; Honour</p>
+        <a href="donors.html" class="hero-btn">Donate To Preserve History</a>
       </div>
     </section>
 
-    <!-- -------------------------------------Events & course------------------------------------- -->
+    <!-- Video -->
+    <div id="video-section" class="grid-con">
+      <h2 class="hidden">Video Section</h2>
+      <section
+        id="player-container"
+        class="col-span-full m-col-start-2 m-col-end-12 l-col-start-3 l-col-end-11"
+      >
+        <h3 class="hidden">Video</h3>
+        <video class="player" controls preload="metadata">
+          <source src="videos/video.mp4" type="video/mp4" />
+          <source src="videos/video.webm" type="video/webm" />
+          <p>
+            Ooops, something went wrong. You may be using an oudated browser or
+            have javascript disabled.
+          </p>
+        </video>
+      </section>
+    </div>
 
-    <section class="course">
-      <h1>Upcoming Project</h1>
-      <p>
-        Brothers in Arms Memorial is a digital tribute to the Indian and
-        Canadian soldiers who fought together in World War.This project aims to
-        educate, inform, drive support and honor their sacrifices through an
-        interactive website.
-      </p>
-      <div class="row">
-        <div class="course-col">
-          <h3>Phase 1</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-            numquam voluptate atque nostrum reprehenderit cumque, laudantium sed
-            quasi fugit est earum. Deleniti dolores ab minus quod obcaecati
-            doloremque! Maiores, autem!
-          </p>
-        </div>
-        <div class="course-col">
-          <h3>Phase 2</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-            numquam voluptate atque nostrum reprehenderit cumque, laudantium sed
-            quasi fugit est earum. Deleniti dolores ab minus quod obcaecati
-            doloremque! Maiores, autem!
-          </p>
-        </div>
-        <div class="course-col">
-          <h3>Phase 3</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-            numquam voluptate atque nostrum reprehenderit cumque, laudantium sed
-            quasi fugit est earum. Deleniti dolores ab minus quod obcaecati
-            doloremque! Maiores, autem!
-          </p>
-        </div>
+    <!-- Featured Stories -->
+
+    <section class="featured-stories grid-con">
+      <h1 class="col-span-full">Featured Stories</h1>
+
+      <div class="story col-span-full m-col-span-4" data-lightbox="story1">
+        <h2>Brotherhood on the Battlefield</h2>
+        <h3>The deep bond between Indian and Canadian soldiers during WW1.</h3>
+        <img
+          src="images/story1.jpg"
+          alt="Indian and Canadian soldiers together"
+        />
+        <p>
+          During World War I, over 135,000 Indian soldiers fought alongside
+          Canadian troops. These men, coming from different parts of the British
+          Empire, developed a strong camaraderie in the trenches. Whether
+          enduring brutal winter conditions in Europe or facing poison gas
+          attacks, their shared hardships created unbreakable bonds of
+          brotherhood.
+        </p>
+      </div>
+
+      <div class="story col-span-full m-col-span-4" data-lightbox="story2">
+        <h2>The Hero of Haifa</h2>
+        <h3>
+          Major Dalpat Singh Shekhawat and the last cavalry charge in military
+          history.
+        </h3>
+        <img src="images/story2.jpg" alt="Major Dalpat Singh Shekhawat" />
+        <p>
+          On September 23, 1918, Major Dalpat Singh Shekhawat led the legendary
+          Jodhpur Lancers in the last successful cavalry charge in military
+          history. Against machine-gun fire, they stormed Haifa, capturing the
+          city from Ottoman forces. This victory not only secured Haifa but also
+          saved the Bahá'í leader from execution.
+        </p>
+      </div>
+
+      <div class="story col-span-full m-col-span-4" data-lightbox="story3">
+        <h2>Letters from the Trenches</h2>
+        <h3>
+          Personal letters from Indian and Canadian soldiers revealing their
+          thoughts and struggles.
+        </h3>
+        <img src="images/story3.jpg" alt="Letter from a soldier" />
+        <p>
+          Through letters sent home, soldiers shared their emotions, fears, and
+          experiences. One Rajput soldier wrote, "This is not war. It is the
+          ending of the world." A wounded Sikh lamented, "No sound man can
+          return to India." These letters capture the resilience, pain, and
+          humanity of the soldiers who fought in the Great War.
+        </p>
       </div>
     </section>
 
@@ -195,45 +233,98 @@
       </div>
     </section>
 
-    <!-- --------------call to action---------- -->
+    <!-- Call to Action -->
 
     <section class="cta">
-      <h1>For More Information About <br />donation</h1>
-      <a href="contact.html" class="hero-btn">CONTACT US</a>
+      <h1>
+        Give Today, <br />
+        Make a Difference Tomorrow
+      </h1>
+      <a href="donors.html" class="hero-btn">DONATE</a>
     </section>
 
-    <!-- --------------Footer---------- -->
+    <!-- Client Info -->
 
-    <section class="footer">
-      <h4>About US</h4>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam non,
-        facer e ut minima adipisci rem unde consequatur sint architecto libero
-        corrupti labore dolores, rerum quas sunt nobis repudiandae minus
-        voluptatum.
-      </p>
-      <div class="icons">
-        <i class="fa fa-facebook"></i>
-        <i class="fa fa-twitter"></i>
-        <i class="fa fa-instagram"></i>
-        <i class="fa fa-linkedln"></i>
-        <i class="fa fa-telegram"></i>
+    <section class="client-info">
+      <h1 class="hidden">Client Info</h1>
+      <h2>Powered by:</h2>
+      <div class="clients">
+        <div class="client">
+          <a href="https://www.srishticanada.org/" target="_blank">
+            <img
+              src="images/shrishti-logo.png"
+              alt="Shrishti Foundation Logo"
+            />
+            <p>Shrishti Foundation</p>
+          </a>
+        </div>
+        <div class="client">
+          <a href="https://publiqmedia.com/" target="_blank">
+            <img src="images/publiq-logo.png" alt="Publiq Media Logo" />
+            <p>Publiq Media</p>
+          </a>
+        </div>
       </div>
-      <!-- <p>Made with <i class="fa fa-heart-o"></i>Easy type shit </p> -->
-      <p>Brother's In Arms Memorial</p>
     </section>
 
-    <!-- ------Javascript------ -->
-    <script>
-      var navLinks = document.querySelector("#navLinks");
+    <!-- Footer -->
 
-      function showMenu() {
-        navLinks.style.right = "0";
-      }
+    <footer>
+      <h1 class="hidden">Footer</h1>
+      <div class="footer-content">
+        <h2 class="hidden">Footer Content</h2>
+        <div class="footer-section about">
+          <div id="logo-footer">
+            <img src="images/logo-flower-02.svg" alt="Brothers In Arm Logo" />
+          </div>
+          <h4>Brothers in Arms Memorial</h4>
+          <p>
+            A digital tribute to the Indian and Canadian soldiers who fought
+            together in World War
+          </p>
+          <div class="contact">
+            <span><i class="fa fa-phone"></i> +1 (123) 456-7890</span>
+            <span
+              ><i class="fa fa-envelope"></i>
+              info@brothersinarmsmemorial.com</span
+            >
+          </div>
+        </div>
+        <div class="footer-section links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="history_stories.html">History &amp; Stories</a></li>
+            <li><a href="victoriacrosses.html">Victoria Crosses</a></li>
+            <li><a href="donors.html">Donors</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section social">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+          </div>
+          <p>Subscribe to our newsletter for updates:</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Brothers in Arms Memorial. All rights reserved.</p>
+        <p>Designed with <i class="fa fa-heart"></i> by M.A.A.K.E</p>
+      </div>
+    </footer>
 
-      function hideMenu() {
-        navLinks.style.right = "-200px";
-      }
-    </script>
+    <!-- Javascript -->
+    <script type="module" defer src="js/main.js"></script>
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
   </body>
 </html>

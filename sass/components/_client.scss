@@ -1,0 +1,46 @@
+@use "../abstracts" as a;
+@use "../abstracts/mixins" as m;
+
+.client-info {
+  text-align: center;
+  padding: 2rem;
+  background-color: a.$accentColor;
+  margin-bottom: 20px;
+
+  h2 {
+    font-size: 1.8rem;
+    margin: 1rem;
+  }
+
+  .clients {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    .client {
+      text-align: center;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+
+        img {
+          max-width: 190px;
+          height: auto;
+          transition: transform 0.3s ease;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+
+        p {
+          margin-top: 0.5rem;
+          font-size: 1rem;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
