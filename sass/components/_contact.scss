@@ -1,46 +1,114 @@
 @use "../abstracts" as a;
-@use "../abstracts/mixins" as m;
 
-.contact-us {
-  width: 80%;
-  margin: auto;
+.contact-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("../images/contact-bg.jpg") no-repeat center center/cover;
 }
 
-.contact-col {
-  flex-basis: 48%;
-  margin-bottom: 30px;
+.contact-main {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/contact-flower-img.jpg") no-repeat center center/cover;
+  background-color: #3c1c1c;
+  color: white;
+}
 
-  div {
-    display: flex;
-    align-items: center;
-    margin-bottom: 40px;
+.contact-info,
+.contact-form {
+  flex: 1 1 45%;
+  max-width: 600px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
 
-    .fa {
-      font-size: 28px;
-      color: #f44336;
-      margin: 10px;
-      margin-right: 30px;
-    }
+.contact-info h2,
+.contact-form h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: a.$accentColor;
+}
 
-    p {
-      padding: 0;
-    }
+.contact-details .contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  i {
+    margin-right: 1rem;
+    color: a.$secondaryColor1;
+  }
+  a {
+    color: a.$primaryColor;
+  }
+}
 
-    h5 {
-      font-size: 20px;
-      margin-bottom: 5px;
-      color: #555;
-      font-weight: 400;
+.social-media {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  .social-icon {
+    color: a.$accentColor;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+    &:hover {
+      color: a.$secondaryColor2;
     }
   }
+}
 
-  input,
-  textarea {
+.donate-button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: a.$primaryColor;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: a.$secondaryColor2;
+  }
+}
+
+.contact-form {
+  .form-group {
+    margin-bottom: 1.5rem;
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: a.$accentColor;
+    }
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid a.$accentColor;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      &:focus {
+        outline: none;
+        border-color: a.$secondaryColor1;
+      }
+    }
+  }
+  .submit-button {
     width: 100%;
-    padding: 15px;
-    margin-bottom: 17px;
-    outline: none;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+    padding: 0.75rem;
+    background-color: a.$primaryColor;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    &:hover {
+      background-color: a.$secondaryColor2;
+    }
   }
 }
