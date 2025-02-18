@@ -8,48 +8,12 @@ h3,
 h4,
 h5 {
   font-family: a.$primaryFont;
+  margin: 20px 0;
   text-align: center;
   font-weight: 600;
 }
 
-/* Mobile styles (default) */
-h1 {
-  font-size: 32px;
-  margin: 24px 0;
-  line-height: 1.2;
-  color: a.$primaryColor;
-}
-
-h2 {
-  font-size: 28px;
-  margin: 20px 0;
-  line-height: 1.3;
-  color: a.$secondaryColor2;
-}
-
-h3 {
-  font-size: 24px;
-  margin: 16px 0;
-  line-height: 1.4;
-  color: a.$secondaryColor1;
-}
-
-h4 {
-  font-size: 20px;
-  margin: 14px 0;
-  line-height: 1.5;
-  color: a.$accentColor;
-}
-
-h5 {
-  font-size: 16px;
-  margin: 12px 0;
-  line-height: 1.6;
-  color: a.$accentColor2;
-}
-
 p,
-li,
 a,
 button,
 input,
@@ -58,97 +22,50 @@ textarea,
 select {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
-  margin: 12px 0;
-  line-height: 1.6;
+  line-height: 14px;
   font-weight: 300;
 }
 
+// Tablet Media Query (768px and above)
 @media screen and (min-width: 768px) {
-  h1 {
-    font-size: 40px;
-    margin: 32px 0;
-    line-height: 1.1;
-  }
-
-  h2 {
-    font-size: 32px;
-    margin: 28px 0;
-    line-height: 1.2;
-  }
-
-  h3 {
-    font-size: 28px;
-    margin: 24px 0;
-    line-height: 1.3;
-  }
-
-  h4 {
-    font-size: 24px;
-    margin: 20px 0;
-    line-height: 1.4;
-  }
-
+  h1,
+  h2,
+  h3,
+  h4,
   h5 {
-    font-size: 20px;
-    margin: 16px 0;
-    line-height: 1.5;
+    margin: 40px;
   }
 
   p,
-  li,
   a,
   button,
   input,
   label,
   textarea,
   select {
-    font-size: 18px;
-    margin: 16px 0;
-    line-height: 1.6;
+    font-size: 20px;
+    line-height: 18px;
   }
 }
 
+// Desktop Media Query (1200px and above)
 @media screen and (min-width: 1200px) {
-  h1 {
-    font-size: 48px;
-    margin: 40px 0;
-    line-height: 1.1;
-  }
-
-  h2 {
-    font-size: 40px;
-    margin: 32px 0;
-    line-height: 1.2;
-  }
-
-  h3 {
-    font-size: 32px;
-    margin: 28px 0;
-    line-height: 1.3;
-  }
-
-  h4 {
-    font-size: 28px;
-    margin: 24px 0;
-    line-height: 1.4;
-  }
-
+  h1,
+  h2,
+  h3,
+  h4,
   h5 {
-    font-size: 24px;
-    margin: 20px 0;
-    line-height: 1.5;
+    margin: 50px; // Increased margin for larger screens
   }
 
   p,
-  li,
   a,
   button,
   input,
   label,
   textarea,
   select {
-    font-size: 20px;
-    margin: 20px 0;
-    line-height: 1.6;
+    font-size: 22px; // Slightly larger font size for better readability
+    line-height: 24px; // Increased line height for better spacing
   }
 }

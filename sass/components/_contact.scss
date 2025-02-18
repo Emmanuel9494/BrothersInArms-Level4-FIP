@@ -1,6 +1,16 @@
 @use "../abstracts" as a;
 @use "../abstracts/mixins" as m;
 
+.location {
+  width: 80%;
+  margin: auto;
+  padding: 80px 0;
+
+  iframe {
+    width: 100%;
+  }
+}
+
 .contact-us {
   width: 80%;
   margin: auto;
