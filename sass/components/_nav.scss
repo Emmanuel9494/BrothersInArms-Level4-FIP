@@ -1,9 +1,14 @@
 @use "../abstracts" as a;
 @use "../abstracts/mixins" as m;
 
+.nav-con {
+  width: 100%;
+  background-color: a.$accentColor2;
+}
+
 nav {
   display: flex;
-  padding: 2% 4%;
+  padding: 0% 4%;
   justify-content: space-between;
   align-items: center;
 

@@ -2,10 +2,10 @@
 @use "../abstracts/mixins" as m;
 
 footer {
-  background-color: #2c3e50;
+  background-color: a.$accentColor2;
   color: #ecf0f1;
   padding: 40px 0 20px;
-  font-family: "Libre Baskerville", serif;
+  // font-family: "Libre Baskerville", serif;
 
   .footer-content {
     display: flex;
