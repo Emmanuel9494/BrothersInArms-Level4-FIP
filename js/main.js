@@ -4,6 +4,7 @@ import { video } from "./modules/video.js";
 import { aboutAnimation } from "./modules/aboutAnimation.js";
 import { historyAnimation } from "./modules/historyAnimation.js";
 import { victoriaAnimation } from "./modules/victoriaAnimation.js";
+import { contact } from "./modules/contact.js";
 
 menu();
 stories();
@@ -11,3 +12,4 @@ video();
 aboutAnimation();
 historyAnimation();
 victoriaAnimation();
+contact();
