@@ -1,0 +1,86 @@
+@use "../abstracts" as a;
+
+.victoria-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/victoriacrosses-bg.jpg") no-repeat center center/cover;
+}
+
+.victoria-crosses-main {
+  padding: 2rem;
+  background-color: #efb9b9;
+  color: white;
+
+  .crosses-london,
+  .canadian-recipients,
+  .indian-recipients,
+  .hero-of-haifa {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background-color: rgba(a.$secondaryColor1, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    .image-container {
+      text-align: center;
+      margin-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+
+      .vc-image {
+        flex: 0 0 20%;
+        max-width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    .recipient-list {
+      ul {
+        list-style-type: disc;
+        padding-left: 2rem;
+
+        li {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+
+    .recipient-card {
+      background-color: rgba(a.$primaryColor, 0.5);
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-left: 6px solid a.$accentColor2;
+      border-radius: 5px;
+
+      h3 {
+        color: a.$accentColor;
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    .haifa-image {
+      text-align: center;
+      margin-top: 1.5rem;
+
+      .haifa-img {
+        max-width: 100%;
+        height: auto;
+        display: inline;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+}
