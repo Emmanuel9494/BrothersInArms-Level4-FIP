@@ -33,13 +33,15 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <!-- Plyr -->
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
   </head>
   <body>
-    <section class="header">
+    <section class="nav-con">
       <nav>
-        <a href="index.html"
-          ><img src="images/logo-flower-02.svg" alt="Brothers In Arms Logo"
-        /></a>
+        <a href="index.html">
+          <img src="images/logo-flower-02.svg" alt="Brothers In Arms Logo" />
+        </a>
         <div class="nav-links" id="navLinks">
           <i class="fa fa-times" onclick="hideMenu()"></i>
           <ul>
@@ -53,16 +55,133 @@
         </div>
         <i class="fa fa-bars" onclick="showMenu()"></i>
       </nav>
-
-      <div class="text-box">
-        <h1>Where Heros Rest, History Lives</h1>
-        <p>Forever Grateful – For Freedom, Sacrifice &amp; Honour</p>
-        <a href="donors.html" class="hero-btn">Donate To Preserve History</a>
-      </div>
     </section>
 
-    <!-- --------------Footer---------- -->
+    <header class="sub-header history-header">
+      <div class="header-content">
+        <h1>Where Heroes Rest, History Lives</h1>
+        <p>
+          Exploring the shared legacy of Indian and Canadian troops during World
+          War I.
+        </p>
+      </div>
+    </header>
 
+    <!-- Main Content -->
+    <main class="history-stories">
+      <!-- History of the Conflict -->
+      <section class="section conflict-history">
+        <h2>History of the Conflict</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>Second Battle of Ypres (1915)</h3>
+            <p>
+              Indian Lahore Division helped Canadian troops withstand the first
+              German gas attack.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <h3>Battle of the Somme (1916)</h3>
+            <p>
+              Indian artillery supported Canadian forces in one of the war’s
+              deadliest battles.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <h3>Battle of Vimy Ridge (1917)</h3>
+            <p>
+              Indian regiments assisted Canadian forces in this historic
+              victory.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Historic Events -->
+      <section class="section key-events">
+        <h2>Key Historic Events</h2>
+        <div class="event-grid">
+          <div class="event-card">
+            <h3>1914</h3>
+            <p>
+              Indian Lahore Division arrives in France, aiding exhausted British
+              forces.
+            </p>
+          </div>
+          <div class="event-card">
+            <h3>1915</h3>
+            <p>
+              Indians and Canadians fight together at Festubert and
+              Passchendaele.
+            </p>
+          </div>
+          <div class="event-card">
+            <h3>1918</h3>
+            <p>
+              The Battle of Haifa, led by Indian cavalry, secures a key city
+              from Ottoman control.
+            </p>
+          </div>
+          <div class="event-card">
+            <h3>Siege of Kut</h3>
+            <p>Indian soldiers endured extreme hardships in Mesopotamia.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Personal Stories -->
+      <section class="section personal-stories">
+        <h2>Personal Stories from Soldiers</h2>
+        <div class="stories-grid">
+          <div class="story-card">
+            <blockquote>
+              "This is not war. It is the ending of the world."
+            </blockquote>
+            <p>– A Rajput soldier’s words from the trenches.</p>
+          </div>
+          <div class="story-card">
+            <blockquote>
+              "God have mercy. The Germans are very strong, but as soon as the
+              Indian troops arrived, their strength was broken."
+            </blockquote>
+            <p>– A Punjabi soldier.</p>
+          </div>
+          <div class="story-card">
+            <blockquote>
+              "When we met the enemy hand to hand, my heart exulted."
+            </blockquote>
+            <p>– A Sikh soldier at Neuve Chapelle.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Letters from Soldiers -->
+      <section class="section soldier-letters">
+        <h2>Letters from Soldiers</h2>
+        <div class="letters-grid">
+          <div class="letter-card">
+            <p>
+              Indian soldiers marveled at literacy among French women and urged
+              their families to educate girls back home.
+            </p>
+          </div>
+          <div class="letter-card">
+            <p>
+              Soldiers described freezing conditions, poison gas attacks, and
+              the emotional toll of battle.
+            </p>
+          </div>
+          <div class="letter-card">
+            <p>
+              "The heart of India is broken… any man who comes here wounded is
+              returned thrice and four times to the trenches."
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
     <footer>
       <h1 class="hidden">Footer</h1>
       <div class="footer-content">
@@ -119,5 +238,71 @@
 
     <!-- ------Javascript------ -->
     <script type="module" defer src="js/main.js"></script>
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <!-- <script>
+      // GSAP Animations
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.from(".history-header h1", {
+        opacity: 0,
+        y: -50,
+        duration: 1.5,
+        ease: "power3.out",
+      });
+
+      gsap.from(".history-header p", {
+        opacity: 0,
+        y: 50,
+        duration: 1.5,
+        delay: 0.5,
+        ease: "power3.out",
+      });
+
+      gsap.from(".timeline-item", {
+        scrollTrigger: {
+          trigger: ".conflict-history",
+          start: "top 80%",
+        },
+        opacity: 0,
+        y: 50,
+        stagger: 0.3,
+        duration: 1,
+      });
+
+      gsap.from(".event-card", {
+        scrollTrigger: {
+          trigger: ".key-events",
+          start: "top 80%",
+        },
+        opacity: 0,
+        x: -50,
+        stagger: 0.3,
+        duration: 1,
+      });
+
+      gsap.from(".story-card", {
+        scrollTrigger: {
+          trigger: ".personal-stories",
+          start: "top 80%",
+        },
+        opacity: 0,
+        y: 50,
+        stagger: 0.3,
+        duration: 1,
+      });
+
+      gsap.from(".letter-card", {
+        scrollTrigger: {
+          trigger: ".soldier-letters",
+          start: "top 80%",
+        },
+        opacity: 0,
+        x: 50,
+        stagger: 0.3,
+        duration: 1,
+      });
+    </script> -->
   </body>
 </html>
