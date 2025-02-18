@@ -8,20 +8,14 @@ export function stories() {
     stories.forEach((story) => {
       story.addEventListener("click", function () {
         const content = `
-              <div class="lightbox-content grid-con">
+              <div class="lightbox-content">
                 <span class="close">&times;</span>
-                <h3 class="col-span-full">${
-                  this.querySelector("h3").innerHTML
-                }</h3>
-                <h5 class="col-span-full">${
-                  this.querySelector("h5").innerHTML
-                }</h5>
+                <h2>${this.querySelector("h2").innerHTML}</h2>
+                <h3>${this.querySelector("h3").innerHTML}</h3>
                 <img src="${this.querySelector("img").src}" alt="${
           this.querySelector("img").alt
-        }" class="col-span-2 m-col-span-6">
-                <p class="col-span-2 m-col-span-6">${
-                  this.querySelector("p").innerHTML
-                }</p>
+        }">
+                <p>${this.querySelector("p").innerHTML}</p>
               </div>
             `;
         lightbox.innerHTML = content;
