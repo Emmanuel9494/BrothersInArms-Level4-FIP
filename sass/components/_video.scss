@@ -10,8 +10,15 @@
 
 #video-section {
   margin: 30px auto;
+  h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: #fc0 1px 0 10px;
+  }
 }
 
 #player-container {
   margin: 20px;
+  box-shadow: 15px 15px 10px a.$accentColor2;
 }
