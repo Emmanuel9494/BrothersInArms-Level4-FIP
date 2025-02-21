@@ -1139,4 +1139,100 @@ nav .fa {
   display: inline;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.donors-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/donors-bg.jpg") no-repeat center center/cover;
+}
+
+.donors-main {
+  padding: 2rem;
+  text-align: center;
+}
+.donors-main .donors-intro {
+  margin-bottom: 3rem;
+}
+.donors-main .donors-intro .intro-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.donors-main .donors-intro .intro-content .donors-hero-img {
+  width: auto;
+  height: 50%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.donors-main .donors-table {
+  margin-bottom: 3rem;
+}
+.donors-main .donors-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.donors-main .donors-table table th,
+.donors-main .donors-table table td {
+  padding: 1rem;
+  border: 1px solid #ddd;
+}
+.donors-main .donors-table table th {
+  background-color: #2c3e50;
+  color: white;
+}
+.donors-main .donors-table table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.donors-main .donors-table table tr:hover {
+  background-color: #f1f1f1;
+}
+.donors-main .why-donate {
+  margin-bottom: 3rem;
+}
+.donors-main .why-donate .donate-reasons {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.donors-main .why-donate .donate-reasons .reason {
+  flex: 1 1 30%;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.donors-main .why-donate .donate-reasons .reason:hover {
+  transform: translateY(-10px);
+}
+.donors-main .why-donate .donate-reasons .reason img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+.donors-main .donor-recognition .recognition-levels {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.donors-main .donor-recognition .recognition-levels .level {
+  flex: 1 1 30%;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.donors-main .donor-recognition .recognition-levels .level:hover {
+  transform: translateY(-10px);
+}
+.donors-main .donor-recognition .recognition-levels .level i {
+  font-size: 2rem;
+  color: #f42121;
+  margin-bottom: 1rem;
 }/*# sourceMappingURL=main.css.map */

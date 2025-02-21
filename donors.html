@@ -3,139 +3,231 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Brother's In Arms Memorial</title>
-    <link href="images/logo-flower.svg" rel="icon" type="image/svg+xml" />
+    <title>Victoria Crosses - Brothers In Arms Memorial</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="Brother In Arms" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
     <link href="css/reset.css" rel="stylesheet" />
     <link href="css/grid.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <!-- Plyr -->
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
   </head>
   <body>
-    <section class="sub-header">
+    <section class="nav-con">
       <nav>
-        <a href="index.html"><img src="images/Asset 5.svg" alt="" /></a>
+        <a href="index.html">
+          <img src="images/logo-flower-02.svg" alt="Brothers In Arms Logo" />
+        </a>
         <div class="nav-links" id="navLinks">
           <i class="fa fa-times" onclick="hideMenu()"></i>
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="Donation.html">Donation</a></li>
+            <li><a href="history_stories.html">History &amp; Stories</a></li>
+            <li><a href="victoriacrosses.html">Victoria Crosses</a></li>
+            <li><a href="donors.html">Donors</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <i class="fa fa-bars" onclick="showMenu()"></i>
       </nav>
-
-      <h1>Support Our Cause – Make a Difference Today</h1>
     </section>
 
-    <!-- --------------blog page ---------- -->
+    <header class="sub-header donors-header">
+      <div class="header-content">
+        <h1>Support Our Cause – Make a Difference Today</h1>
+        <p>
+          Donate today and help us make a lasting impact. <br />Together, we can
+          build a better future!
+        </p>
+      </div>
+    </header>
 
-    <section class="blog-content">
-      <div class="row">
-        <div class="blog-left">
-          <img src="images/dd2.jpg" />
-          <h2>Why You Should Donate ?</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-            sapiente cum tempore perspiciatis dignissimos dolore qui et quos
-            eligendi iusto rerum aperiam magni ipsa illum, nesciunt corrupti
-            impedit facere itaque?
-          </p>
-          <br />
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Consequatur maxime fugit, quis temporibus amet exercitationem nobis
-            dolores sequi delectus nam eveniet laboriosam quibusdam nulla
-            perferendis blanditiis porro repellat, adipisci aperiam?
-          </p>
-          <br />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim minus
-            eos repudiandae facilis voluptas quas explicabo, deserunt optio illo
-            eaque totam ut, eum distinctio non aut tempora. Quidem, beatae sint?
-          </p>
+    <!-- Main Content -->
 
-          <div class="comment-box">
-            <h3>Leave a comment</h3>
-            <form class="comment-form">
-              <input type="text" placeholder="Enter Name" />
-              <input type="Email" placeholder="Enter Email" />
-              <textarea rows="5" placeholder="Your Comment"></textarea>
-              <button type="submit" class="hero-btn red-btn">
-                Post Comment
-              </button>
-            </form>
+    <main class="donors-main">
+      <section class="donors-intro">
+        <div class="intro-content">
+          <h2>List of Donors</h2>
+          <p>
+            We are deeply grateful to all our donors who have contributed to
+            preserving the legacy of our heroes.
+          </p>
+          <img
+            src="images/donors-hero.jpeg"
+            alt="Donors Hero Image"
+            class="donors-hero-img"
+          />
+        </div>
+      </section>
+
+      <section class="donors-table">
+        <h2 class="hidden">Donors Table</h2>
+        <h3>Our Contributors</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Campaign</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John Doe</td>
+              <td>Memorial Pathway</td>
+              <td>$5,000</td>
+            </tr>
+            <tr>
+              <td>Jane Smith</td>
+              <td>Educational Displays</td>
+              <td>$2,500</td>
+            </tr>
+            <tr>
+              <td>ABC Corporation</td>
+              <td>Plaques &amp; Tribute</td>
+              <td>$10,000</td>
+            </tr>
+            <!-- Add more rows as needed -->
+          </tbody>
+        </table>
+      </section>
+
+      <section class="why-donate">
+        <h2>Why You Should Donate</h2>
+        <div class="donate-reasons">
+          <div class="reason">
+            <img
+              src="images/soldier_indian_reference.jpg"
+              alt="Preserve History"
+            />
+            <h3>Preserve History</h3>
+            <p>Ensure future generations learn about these unsung heroes.</p>
+          </div>
+          <div class="reason">
+            <img
+              src="images/Memorial-Site-Plan.jpeg"
+              alt="Support the Memorial"
+            />
+            <h3>Support the Memorial</h3>
+            <p>
+              Help build a lasting tribute with pathways, plaques, and
+              educational displays.
+            </p>
+          </div>
+          <div class="reason">
+            <img src="images/pose_reference4.jpg" alt="Honor Their Sacrifice" />
+            <h3>Honor Their Sacrifice</h3>
+            <p>Commemorate the soldiers who fought for freedom and justice.</p>
           </div>
         </div>
-        <div class="blog-right">
-          <h3>Post catergories</h3>
-          <div>
-            <span>donate people</span>
-            <span>21</span>
+      </section>
+
+      <section class="donor-recognition">
+        <h2>Donor Recognition</h2>
+        <div class="recognition-levels">
+          <div class="level">
+            <i class="fa fa-star"></i>
+            <h3>Major Contributors</h3>
+            <p>Recognized on plaques at the memorial.</p>
           </div>
-          <div>
-            <span>crew </span>
-            <span>51</span>
+          <div class="level">
+            <i class="fa fa-users"></i>
+            <h3>Community Donors</h3>
+            <p>Featured in donor lists on the website.</p>
           </div>
-          <div>
-            <span>gaving</span>
-            <span>31</span>
-          </div>
-          <div>
-            <span>companies</span>
-            <span>11</span>
-          </div>
-          <div>
-            <span>hospitals</span>
-            <span>41</span>
+          <div class="level">
+            <i class="fa fa-building"></i>
+            <h3>Corporate &amp; Institutional Supporters</h3>
+            <p>Highlighted in sponsorship sections.</p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <!-- --------------Footer---------- -->
-
-    <section class="footer">
-      <h4>About US</h4>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam non,
-        facer e ut minima adipisci rem unde consequatur sint architecto libero
-        corrupti labore dolores, rerum quas sunt nobis repudiandae minus
-        voluptatum.
-      </p>
-      <div class="icons">
-        <i class="fa fa-facebook"></i>
-        <i class="fa fa-twitter"></i>
-        <i class="fa fa-instagram"></i>
-        <i class="fa fa-linkedln"></i>
-        <i class="fa fa-telegram"></i>
+    <!-- Footer -->
+    <footer>
+      <h1 class="hidden">Footer</h1>
+      <div class="footer-content">
+        <h2 class="hidden">Footer Content</h2>
+        <div class="footer-section about">
+          <div id="logo-footer">
+            <img src="images/logo-flower-02.svg" alt="Brothers In Arm Logo" />
+          </div>
+          <h4>Brothers in Arms Memorial</h4>
+          <p>
+            A digital tribute to the Indian and Canadian soldiers who fought
+            together in World War
+          </p>
+          <div class="contact">
+            <span><i class="fa fa-phone"></i> +1 (123) 456-7890</span>
+            <span
+              ><i class="fa fa-envelope"></i>
+              info@brothersinarmsmemorial.com</span
+            >
+          </div>
+        </div>
+        <div class="footer-section links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="history_stories.html">History &amp; Stories</a></li>
+            <li><a href="victoriacrosses.html">Victoria Crosses</a></li>
+            <li><a href="donors.html">Donors</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section social">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+          </div>
+          <p>Subscribe to our newsletter for updates:</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
       </div>
-      <!-- <p>Made with <i class="fa fa-heart-o"></i>Easy type shit </p> -->
-      <p>Brother's In Arms Memorial</p>
-    </section>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Brothers in Arms Memorial. All rights reserved.</p>
+        <p>Designed with <i class="fa fa-heart"></i> by M.A.A.K.E</p>
+      </div>
+    </footer>
 
     <!-- ------Javascript------ -->
-    <script>
-      var navLinks = document.querySelector("#navLinks");
-
-      function showMenu() {
-        navLinks.style.right = "0";
-      }
-
-      function hideMenu() {
-        navLinks.style.right = "-200px";
-      }
-    </script>
+    <script type="module" defer src="js/donors.js"></script>
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
   </body>
 </html>

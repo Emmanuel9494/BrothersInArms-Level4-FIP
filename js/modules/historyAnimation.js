@@ -1,20 +1,20 @@
 export function historyAnimation() {
   gsap.registerPlugin(ScrollTrigger);
-  console.log("this is called");
-  gsap.from(".history-header h1", {
-    opacity: 0,
-    y: -50,
-    duration: 1.5,
-    ease: "power3.out",
-  });
 
-  gsap.from(".history-header p", {
-    opacity: 0,
-    y: 50,
-    duration: 1.5,
-    delay: 0.5,
-    ease: "power3.out",
-  });
+  // gsap.from(".history-header h1", {
+  //   opacity: 0,
+  //   y: -50,
+  //   duration: 1.5,
+  //   ease: "power3.out",
+  // });
+
+  // gsap.from(".history-header p", {
+  //   opacity: 0,
+  //   y: 50,
+  //   duration: 1.5,
+  //   delay: 0.5,
+  //   ease: "power3.out",
+  // });
 
   gsap.from(".timeline-item", {
     scrollTrigger: {
