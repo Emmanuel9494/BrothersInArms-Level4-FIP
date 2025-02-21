@@ -3,20 +3,20 @@ export function victoriaAnimation() {
   gsap.registerPlugin(ScrollTrigger);
 
   // Animate header content
-  gsap.from(".header-content h1", {
-    opacity: 0,
-    y: -50,
-    duration: 1.5,
-    ease: "power3.out",
-  });
+  // gsap.from(".header-content h1", {
+  //   opacity: 0,
+  //   y: -50,
+  //   duration: 1.5,
+  //   ease: "power3.out",
+  // });
 
-  gsap.from(".header-content p", {
-    opacity: 0,
-    y: 50,
-    duration: 1.5,
-    delay: 0.5,
-    ease: "power3.out",
-  });
+  // gsap.from(".header-content p", {
+  //   opacity: 0,
+  //   y: 50,
+  //   duration: 1.5,
+  //   delay: 0.5,
+  //   ease: "power3.out",
+  // });
 
   // Animate sections on scroll
   gsap.utils

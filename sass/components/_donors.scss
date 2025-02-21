@@ -1,0 +1,118 @@
+@use "../abstracts" as a;
+
+.donors-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("../images/donors-bg.jpg") no-repeat center center/cover;
+}
+
+.donors-main {
+  padding: 2rem;
+  text-align: center;
+
+  .donors-intro {
+    margin-bottom: 3rem;
+
+    .intro-content {
+      max-width: 800px;
+      margin: 0 auto;
+
+      .donors-hero-img {
+        width: auto;
+        height: 50%;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  .donors-table {
+    margin-bottom: 3rem;
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+      th,
+      td {
+        padding: 1rem;
+        border: 1px solid #ddd;
+      }
+
+      th {
+        background-color: a.$accentColor2;
+        color: white;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      tr:hover {
+        background-color: #f1f1f1;
+      }
+    }
+  }
+
+  .why-donate {
+    margin-bottom: 3rem;
+
+    .donate-reasons {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+
+      .reason {
+        flex: 1 1 30%;
+        margin: 1rem;
+        padding: 1rem;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: translateY(-10px);
+        }
+
+        img {
+          width: 100%;
+          border-radius: 10px;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+
+  .donor-recognition {
+    .recognition-levels {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+
+      .level {
+        flex: 1 1 30%;
+        margin: 1rem;
+        padding: 1rem;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: translateY(-10px);
+        }
+
+        i {
+          font-size: 2rem;
+          color: a.$primaryColor;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
