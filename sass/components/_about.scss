@@ -1,12 +1,13 @@
 @use "../abstracts" as a;
 
 .about-header {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background: linear-gradient(a.$overlayDark, a.$overlayDark),
     url("../images/phase-1-img-1.JPG") no-repeat center center/cover;
 }
 
 .about-main {
   padding: 2rem 0;
+  // background-color: a.$backgroundColor;
 
   .container {
     max-width: 1200px;
@@ -14,11 +15,11 @@
     padding: 0 2rem;
   }
 
-  // h2 {
+   h2 {
   //   font-size: 2.5rem;
-  //   color: a.$primaryColor;
+    color: a.$mediumGray;
   //   margin-bottom: 1.5rem;
-  // }
+   }
 
   // p {
   //   font-size: 1.2rem;
@@ -39,13 +40,19 @@
     .mission,
     .vision {
       flex: 1;
-      background: #ff02022f;
+      background-color: #0f1116;
       padding: 2rem;
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+      p{
+        color: a.$white;
+        font-family: a.$secondaryFont;
+        font-weight: 200;
+      }
 
       h2 {
-        color: a.$secondaryColor1;
+        color: a.$white;
       }
     }
   }
@@ -54,18 +61,33 @@
     margin: 4rem 0;
 
     .phase {
-      background: a.$accentColor;
+      background: rgba(255, 255, 255, 0.95);
       padding: 2rem;
-      border-radius: 10px;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: translateY(-2px);
+      }
 
       h3 {
-        color: a.$secondaryColor2;
+        color: a.$mediumGray;
+        margin-bottom: 1.5rem;
+        font-family: a.$primaryFont;
       }
+
+      p {
+        color: a.$textColor;
+        margin-bottom: 1.5rem;
+      }
+
       img {
         max-width: 100%;
         height: auto;
+        border-radius: 6px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       }
     }
   }
@@ -73,27 +95,47 @@
   .purpose {
     margin: 4rem 0;
 
+    h2 {
+      color: a.$mediumGray;
+      margin-bottom: 2rem;
+    }
+
     ul {
       list-style: none;
       padding: 0;
 
       li {
-        background: #ff02022f;
-        padding: 1rem;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 1.5rem 2rem;
         margin-bottom: 1rem;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        color: a.$textColor;
+        transition: all 0.2s ease;
+        border-left: 4px solid a.$gold;
+
+        &:hover {
+          transform: translateX(4px);
+          border-left-color: a.$burgundy;
+        }
       }
     }
   }
 
   .location {
-    margin: 1rem 0;
-    padding: 20px 0;
+    margin: 4rem 0;
+    
+    h2 {
+      color: a.$mediumGray;
+      margin-bottom: 2rem;
+    }
 
     iframe {
       width: 100%;
-      padding: 30px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      margin: 2rem 0;
+      min-height: 400px;
     }
   }
 }

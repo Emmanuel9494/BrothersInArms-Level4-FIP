@@ -4,7 +4,7 @@
 .header {
   min-height: 100vh;
   width: 100%;
-  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+  background-image: linear-gradient(a.$overlayDark, a.$overlayDark),
     url(../images/pase-1-img-3.JPG);
   background-position: center;
   background-size: cover;
@@ -13,7 +13,7 @@
 
 .text-box {
   width: 90%;
-  color: #fff;
+  color: a.$white;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -21,39 +21,59 @@
   text-align: center;
 
   h1 {
-    color: a.$accentColor;
+    color: a.$gold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    // margin-bottom: 1.5rem;
   }
 
   p {
     margin: 10px 0 40px;
-
-    color: #fff;
+    color: a.$white;
+    font-weight: 200;
+    // font-size: 1.1rem;
+    // line-height: 1.6;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    // max-width: 800px;
+    // margin-left: auto;
+    // margin-right: auto;
+    font-family: a.$secondaryFont;
   }
 
   a {
-    font-weight: bold;
+    font-weight: 600;
   }
 }
 
 .sub-header {
-  height: 50vh;
+  height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: white;
+  color: a.$white;
+  background-image: linear-gradient(a.$overlayDark, a.$overlayDark),
+    url(../images/pase-1-img-3.JPG);
+  background-position: center;
+  background-size: cover;
 
   .header-content {
     h1 {
-      margin-bottom: 1rem;
-      color: a.$accentColor;
-      text-shadow: 2px 2px 4px black;
+      margin-bottom: 1.5rem;
+      color: a.$gold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      // font-size: 2.5rem;
+      font-family: a.$primaryFont;
     }
 
     p {
-      font-weight: bold;
+      font-weight: 200;
       margin: auto 20px;
-      text-shadow: 1px 1px 2px black;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      max-width: 600px;
+      line-height: 1.6;
+      color: a.$white;
+      font-family: a.$secondaryFont;
+      text-align: center;
     }
   }
 }
@@ -61,53 +81,56 @@
 .hero-btn {
   display: inline-block;
   text-decoration: none;
-  color: #fff;
-  border: 2px solid #fff;
+  color: a.$white;
+  border: 2px solid a.$gold;
   padding: 12px 34px;
   background: transparent;
-  background-color: #ba020280;
   position: relative;
   cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
 
   &:hover {
-    border: 1px solid a.$primaryColor;
-    background: a.$primaryColor;
-    transition: 1s;
+    border-color: a.$gold;
+    background: a.$gold;
+    color: a.$navy;
   }
 }
 
 .red-btn {
-  border: 1px solid a.$primaryColor;
-  background: transparent;
-  color: a.$primaryColor;
+  border: 2px solid a.$burgundy;
+  background: a.$burgundy;
+  color: a.$white;
 
   &:hover {
-    color: #fff;
+    background: darken(a.$burgundy, 10%);
+    border-color: darken(a.$burgundy, 10%);
+    color: a.$white;
   }
 }
 
-// @media screen and (min-width: 768px) {
-//   .text-box {
-//     h1 {
-//       font-size: 32px;
-//     }
+@media screen and (min-width: 768px) {
+  .text-box {
+    h1 {
+      font-size: 2.5rem;
+    }
 
-//     p,
-//     a {
-//       font-size: 18px;
-//     }
-//   }
-// }
+    p {
+      // font-size: 1.125rem;
+      text-align: center;
+    }
+  }
+}
 
-// @media screen and (min-width: 1200px) {
-//   .text-box {
-//     h1 {
-//       font-size: 44px;
-//     }
+@media screen and (min-width: 1200px) {
+  .text-box {
+    h1 {
+      font-size: 3.5rem;
+    }
 
-//     p,
-//     a {
-//       font-size: 20px;
-//     }
-//   }
-// }
+    p {
+      font-size: 1.25rem;
+    }
+  }
+}

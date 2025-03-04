@@ -17,35 +17,35 @@ h1 {
   font-size: 32px;
   margin: 24px 0;
   line-height: 1.2;
-  color: a.$primaryColor;
+  color: a.$navy;
 }
 
 h2 {
   font-size: 28px;
   margin: 20px 0;
   line-height: 1.3;
-  color: a.$secondaryColor2;
+  color: a.$burgundy;
 }
 
 h3 {
   font-size: 24px;
   margin: 16px 0;
   line-height: 1.4;
-  color: a.$secondaryColor1;
+  color: a.$steel;
 }
 
 h4 {
   font-size: 20px;
   margin: 14px 0;
   line-height: 1.5;
-  color: a.$accentColor;
+  color: a.$gold;
 }
 
 h5 {
   font-size: 16px;
   margin: 12px 0;
   line-height: 1.6;
-  color: a.$accentColor2;
+  color: a.$steel;
 }
 
 p,
@@ -60,7 +60,8 @@ select {
   font-size: 16px;
   margin: 12px 0;
   line-height: 1.6;
-  font-weight: 300;
+  font-weight: 400;
+  color: a.$textColor;
 }
 
 @media screen and (min-width: 768px) {

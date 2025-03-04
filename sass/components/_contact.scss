@@ -1,8 +1,9 @@
 @use "../abstracts" as a;
 
 .contact-header {
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+  background: linear-gradient(a.$overlayDark, a.$overlayDark),
     url("../images/contact-bg.jpg") no-repeat center center/cover;
+    color: a.$white;
 }
 
 .contact-main {
@@ -11,104 +12,159 @@
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background: linear-gradient(a.$gold, rgba(255, 255, 255, 0.92)),
     url("../images/contact-flower-img.jpg") no-repeat center center/cover;
-  background-color: #3c1c1c;
-  color: white;
+  background-color: a.$navy;
+  color: a.$white;
 }
 
 .contact-info,
 .contact-form {
   flex: 1 1 45%;
   max-width: 600px;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.932);
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  p{
+    color: a.$white;
+  font-family: a.$secondaryFont;
+  font-weight: 400;
+  }
 }
 
 .contact-info h2,
 .contact-form h2 {
   font-size: 2rem;
-  margin-bottom: 1rem;
-  color: a.$accentColor;
+  margin-bottom: 1.5rem;
+  color: a.$gold;
+  font-weight: 600;
+  color: a.$white;
+  font-family: a.$primaryFont;
 }
 
 .contact-details .contact-item {
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
+  p{
+    color: a.$white;
+    font-family: a.$secondaryFont;
+    font-weight: 200;
+  }
+
   i {
     margin-right: 1rem;
-    color: a.$secondaryColor1;
+    color: a.$gold;
+    font-size: 1.25rem;
   }
+  
   a {
-    color: a.$primaryColor;
+    color: a.$white;
+    transition: color 0.2s ease;
+    text-decoration: none;
+    
+    &:hover {
+      color: a.$gold;
+    }
   }
 }
 
 .social-media {
   display: flex;
-  gap: 1rem;
-  margin-top: 1.5rem;
+  gap: 1.25rem;
+  margin-top: 2rem;
+  
   .social-icon {
-    color: a.$accentColor;
+    color: a.$lightGray;
     font-size: 1.5rem;
-    transition: color 0.3s ease;
+    transition: color 0.2s ease;
+    
     &:hover {
-      color: a.$secondaryColor2;
+      color: a.$gold;
     }
   }
 }
 
 .donate-button {
   display: inline-block;
-  margin-top: 1.5rem;
-  padding: 0.75rem 1.5rem;
-  background-color: a.$primaryColor;
-  color: white;
-  border-radius: 5px;
+  margin-top: 2rem;
+  padding: 0.875rem 2rem;
+  background-color: a.$burgundy;
+  color: a.$white;
+  border-radius: 6px;
   text-align: center;
-  transition: background-color 0.3s ease;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  
   &:hover {
-    background-color: a.$secondaryColor2;
+    background-color: darken(a.$burgundy, 10%);
+    transform: translateY(-1px);
   }
 }
 
 .contact-form {
   .form-group {
     margin-bottom: 1.5rem;
+    
     label {
       display: block;
-      margin-bottom: 0.5rem;
-      color: a.$accentColor;
+      margin-bottom: 0.75rem;
+      color: a.$gold;
+      font-weight: 500;
     }
+    
     input,
     textarea,
     select {
       width: 100%;
-      padding: 0.75rem;
-      border: 1px solid a.$accentColor;
-      border-radius: 5px;
-      background: rgba(255, 255, 255, 0.1);
-      color: white;
+      padding: 0.875rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.05);
+      color: a.$white;
+      font-size: 1rem;
+      transition: all 0.2s ease;
+      
+      &::placeholder {
+        color: a.$mediumGray;
+      }
+      
       &:focus {
         outline: none;
-        border-color: a.$secondaryColor1;
+        border-color: a.$gold;
+        background: rgba(255, 255, 255, 0.08);
       }
     }
+    
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
   }
+  
   .submit-button {
     width: 100%;
-    padding: 0.75rem;
-    background-color: a.$primaryColor;
-    color: white;
+    padding: 1rem;
+    background-color: a.$burgundy;
+    color: a.$white;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+    
     &:hover {
-      background-color: a.$secondaryColor2;
+      background-color: darken(a.$burgundy, 10%);
+      transform: translateY(-1px);
+    }
+    
+    &:active {
+      transform: translateY(0);
     }
   }
 }
