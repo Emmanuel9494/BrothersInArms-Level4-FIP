@@ -1,5 +1,40 @@
-$primaryColor: #f42121;
-$secondaryColor1: #ff8224;
-$secondaryColor2: #ba0202;
-$accentColor: #ffbe2e;
-$accentColor2: #2c3e50;
+// Primary Colors
+$navy: #1D3557;        // Deep navy - represents dignity and authority
+$burgundy: #BA0202;    // Deep burgundy - represents sacrifice and honor
+
+// Secondary Colors
+$gold: #FF8224;        // Muted gold - represents honor and distinction
+$steel: #0f1116;       // Steel gray - represents strength and resilience
+
+// Neutral Colors
+$white: #FFFFFF;
+$offWhite: #F5F5F5;
+$lightGray: #E2E8F0;
+$mediumGray: #111418;
+$darkGray: #2D3748;
+
+// Semantic Colors
+$primaryColor: $navy;
+$secondaryColor1: $burgundy;
+$secondaryColor2: $steel;
+$accentColor: $gold;
+$textColor: $darkGray;
+$backgroundColor: $offWhite;
+
+// Overlay Colors
+$overlayDark: rgba(3, 9, 31, 0.753);    // Navy overlay
+$overlayLight: rgba(245, 245, 245, 0.9); // Light overlay
+
+// Interactive Colors
+$linkColor: $burgundy;
+$linkHoverColor: darken($burgundy, 10%);
+$buttonPrimaryBg: $navy;
+$buttonPrimaryHover: darken($navy, 10%);
+$buttonSecondaryBg: $gold;
+$buttonSecondaryHover: darken($gold, 10%);
+
+// Alert Colors
+$success: #2F855A;
+$error: #C53030;
+$warning: #C05621;
+$info: #2B6CB0;

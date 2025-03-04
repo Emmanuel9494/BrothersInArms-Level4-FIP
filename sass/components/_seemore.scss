@@ -10,10 +10,11 @@
 .see-more-link {
   display: inline-flex;
   align-items: center;
-  color: a.$secondaryColor1;
+  color: a.$steel;
   text-decoration: none;
   font-size: 1.2em;
   transition: color 0.3s ease;
+  font-family: a.$secondaryFont;
 
   &:hover {
     color: a.$secondaryColor2;

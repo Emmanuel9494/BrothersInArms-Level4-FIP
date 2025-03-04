@@ -1,5 +1,4 @@
 @use "../abstracts" as a;
-
 :root {
   --plyr-color-main: a.$primaryColor;
   --plyr-control-icon-size: 15px;
@@ -9,16 +8,51 @@
 }
 
 #video-section {
-  margin: 30px auto;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  max-width: 1200px;
+
   h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-shadow: #fc0 1px 0 10px;
+    color: a.$navy;
+    margin-bottom: 2rem;
+    position: relative;
+    font-family: a.$primaryFont;
+    font-weight: lighter;
+    color: a.$mediumGray;
+
+    // &::after {
+    //   content: '';
+    //   position: absolute;
+    //   bottom: -0.5rem;
+    //   left: 50%;
+    //   transform: translateX(-50%);
+    //   width: 90px;
+    //   height: 3px;
+    //   background-color: a.$burgundy;
+    //   border-radius: 2px;
+    // }
   }
 }
 
 #player-container {
-  margin: 20px;
-  box-shadow: 15px 15px 10px a.$accentColor2;
+  margin: 2rem auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.5);
+  background-color: a.$navy;
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, a.$burgundy, a.$gold);
+    z-index: 1;
+  }
 }

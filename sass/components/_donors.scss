@@ -1,117 +1,261 @@
 @use "../abstracts" as a;
 
 .donors-header {
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+  background: linear-gradient(a.$overlayDark, a.$overlayDark),
     url("../images/donors-bg.jpg") no-repeat center center/cover;
 }
 
 .donors-main {
-  padding: 2rem;
+  padding: 4rem 2rem;
   text-align: center;
+  background-color: a.$backgroundColor;
+  img{
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.582);
+  }
 
   .donors-intro {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
+    
+    h2 {
+      color: a.$mediumGray;
+      margin-bottom: 2rem;
+      position: relative;
+      padding-bottom: 1rem;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background-color: a.$gold;
+        border-radius: 2px;
+      }
+    }
 
     .intro-content {
       max-width: 800px;
       margin: 0 auto;
 
+      p {
+        color: a.$textColor;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+      }
+
       .donors-hero-img {
-        width: auto;
-        height: 50%;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        transition: transform 0.2s ease;
+
+        &:hover {
+          transform: scale(1.02);
+        }
       }
     }
   }
 
   .donors-table {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 
     table {
       width: 100%;
-      border-collapse: collapse;
+      max-width: 1200px;
+      border-collapse: separate;
+      border-spacing: 0;
       margin: 0 auto;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border-radius: 8px;
+      overflow: hidden;
 
       th,
       td {
-        padding: 1rem;
-        border: 1px solid #ddd;
+        padding: 1.25rem;
+        text-align: left;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
       }
 
       th {
-        background-color: a.$accentColor2;
-        color: white;
+        background-color: a.$mediumGray;
+        color: a.$white;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.95rem;
+        letter-spacing: 0.5px;
       }
 
-      tr:nth-child(even) {
-        background-color: #f9f9f9;
-      }
+      tr {
+        background-color: rgba(255, 255, 255, 0.95);
+        transition: background-color 0.2s ease;
 
-      tr:hover {
-        background-color: #f1f1f1;
+        &:nth-child(even) {
+          background-color: rgba(235, 235, 235, 0.514);
+        }
+
+        &:hover {
+          background-color: rgba(a.$gold, 0.5);
+        }
+
+        td {
+          color: a.$textColor;
+        }
       }
     }
   }
 
   .why-donate {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
+
+    h2 {
+      color: a.$navy;
+      margin-bottom: 3rem;
+      position: relative;
+      padding-bottom: 1rem;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background-color: a.$gold;
+        border-radius: 2px;
+      }
+    }
 
     .donate-reasons {
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
       flex-wrap: wrap;
+      gap: 2rem;
 
       .reason {
-        flex: 1 1 30%;
-        margin: 1rem;
-        padding: 1rem;
-        background-color: white;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
+        flex: 1 1 300px;
+        max-width: 400px;
+        padding: 2rem;
+        background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        transition: all 0.2s ease;
 
         &:hover {
-          transform: translateY(-10px);
+          transform: translateY(-4px);
+          box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
         }
 
         img {
           width: 100%;
-          border-radius: 10px;
+          border-radius: 6px;
+          margin-bottom: 1.5rem;
+        }
+
+        h3 {
+          color: a.$burgundy;
           margin-bottom: 1rem;
+          font-weight: 600;
+        }
+
+        p {
+          color: a.$textColor;
+          line-height: 1.6;
         }
       }
     }
   }
 
   .donor-recognition {
+    h2 {
+      color: a.$navy;
+      margin-bottom: 3rem;
+      position: relative;
+      padding-bottom: 1rem;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background-color: a.$gold;
+        border-radius: 2px;
+      }
+    }
+
     .recognition-levels {
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
       flex-wrap: wrap;
+      gap: 2rem;
 
       .level {
-        flex: 1 1 30%;
-        margin: 1rem;
-        padding: 1rem;
-        background-color: white;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
+        flex: 1 1 300px;
+        max-width: 400px;
+        padding: 2rem;
+        background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        transition: all 0.2s ease;
 
         &:hover {
-          transform: translateY(-10px);
+          transform: translateY(-4px);
+          box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
         }
 
         i {
-          font-size: 2rem;
-          color: a.$primaryColor;
-          margin-bottom: 1rem;
+          font-size: 2.5rem;
+          color: a.$gold;
+          margin-bottom: 1.5rem;
+          transition: transform 0.2s ease;
         }
+
+        &:hover i {
+          transform: scale(1.1);
+        }
+
+        h3 {
+          color: a.$burgundy;
+          margin-bottom: 1rem;
+          font-weight: 600;
+        }
+
+        p {
+          color: a.$textColor;
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 3rem 1.5rem;
+
+    .donors-table {
+      overflow-x: auto;
+      
+      table {
+        th, td {
+          padding: 1rem;
+          font-size: 0.95rem;
+        }
+      }
+    }
+
+    .donate-reasons,
+    .recognition-levels {
+      gap: 1.5rem;
+
+      .reason,
+      .level {
+        flex: 1 1 100%;
+        padding: 1.5rem;
       }
     }
   }

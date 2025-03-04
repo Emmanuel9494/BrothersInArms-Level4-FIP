@@ -2,9 +2,9 @@
 @use "../abstracts/mixins" as m;
 
 footer {
-  background-color: a.$accentColor2;
-  color: #ecf0f1;
-  padding: 40px 0 20px;
+  background-color: a.$mediumGray;
+  color: a.$white;
+  padding: 4rem 0 2rem;
   // font-family: "Libre Baskerville", serif;
 
   .footer-content {
@@ -13,12 +13,12 @@ footer {
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 2rem;
 
     .footer-section {
       flex: 1;
       min-width: 250px;
-      margin: 20px 0;
+      margin: 1.5rem 0;
 
       &.about {
         text-align: center; // Center align the content in the "about" section
@@ -33,25 +33,29 @@ footer {
         }
 
         h4 {
-          margin-bottom: 10px;
-          font-size: 18px;
+          margin-bottom: 1rem;
+          font-size: 1.25rem;
+          color: a.$gold;
+          font-family: a.$primaryFont;
         }
 
         p {
-          font-size: 14px;
+          font-size: 1rem;
           line-height: 1.6;
-          margin-bottom: 20px;
+          margin-bottom: 1.5rem;
+          color: a.$lightGray;
         }
 
         .contact {
           span {
             display: block;
-            margin: 10px 0;
-            font-size: 14px;
+            margin: 0.75rem 0;
+            font-size: 0.95rem;
+            color: a.$lightGray;
 
             i {
-              margin-right: 10px;
-              color: a.$secondaryColor1;
+              margin-right: 0.75rem;
+              color: a.$gold;
             }
           }
         }
@@ -63,17 +67,18 @@ footer {
           padding: 0;
 
           li {
-            margin: 10px 0;
+            margin: 0.75rem 0;
             text-align: center;
 
             a {
-              color: #ecf0f1;
+              color: a.$lightGray;
               text-decoration: none;
               text-align: center;
-              font-size: 14px;
+              font-size: 1rem;
+              transition: color 0.2s ease;
 
               &:hover {
-                color: a.$secondaryColor1;
+                color: a.$gold;
               }
             }
           }
@@ -82,21 +87,22 @@ footer {
 
       &.social {
         .social-icons {
-          margin-bottom: 20px;
+          margin-bottom: 1.5rem;
 
           a {
-            color: #ecf0f1;
-            font-size: 20px;
-            margin-right: 15px;
-            transition: color 0.3s;
+            color: a.$lightGray;
+            font-size: 1.5rem;
+            margin-right: 1.25rem;
+            transition: color 0.2s ease;
 
             &:hover {
-              color: a.$secondaryColor1;
+              color: a.$gold;
             }
           }
         }
         p {
-          margin-bottom: 15px;
+          margin-bottom: 1rem;
+          color: a.$lightGray;
         }
 
         .newsletter-form {
@@ -105,24 +111,33 @@ footer {
 
           input {
             flex: 1;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            margin-right: 10px;
-            font-size: 14px;
+            padding: 0.75rem;
+            border: 1px solid a.$steel;
+            border-radius: 4px;
+            margin-right: 0.75rem;
+            font-size: 0.95rem;
+            background-color: rgba(255, 255, 255, 0.05);
+            color: a.$white;
+
+            &:focus {
+              outline: none;
+              border-color: a.$gold;
+              background-color: rgba(255, 255, 255, 0.1);
+            }
           }
 
           button {
-            padding: 10px 20px;
-            background-color: a.$primaryColor;
-            color: #ecf0f1;
+            padding: 0.75rem 1.5rem;
+            background-color: a.$burgundy;
+            color: a.$white;
             border: none;
-            border-radius: 5px;
+            border-radius: 4px;
             cursor: pointer;
-            font-size: 14px;
+            font-size: 0.95rem;
+            transition: background-color 0.2s ease;
 
             &:hover {
-              background-color: a.$secondaryColor1;
+              background-color: darken(a.$burgundy, 10%);
             }
           }
         }
@@ -132,16 +147,17 @@ footer {
 
   .footer-bottom {
     text-align: center;
-    padding: 20px 0;
-    border-top: 1px solid #34495e;
-    margin-top: 20px;
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 2rem;
 
     p {
-      margin: 5px 0;
-      font-size: 14px;
+      margin: 0.5rem 0;
+      font-size: 0.9rem;
+      color: a.$white;
 
       i {
-        color: #e74c3c;
+        color: a.$burgundy;
       }
     }
   }
@@ -149,13 +165,17 @@ footer {
 
 // Responsive Design
 @media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  footer {
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
 
-    .footer-section {
-      margin: 20px 0;
+      .footer-section {
+        margin: 1.5rem 0;
+        width: 100%;
+        max-width: 400px;
+      }
     }
   }
 }

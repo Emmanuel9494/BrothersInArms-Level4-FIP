@@ -6,6 +6,39 @@
   max-width: 900px;
   margin: auto;
   padding: 40px 20px;
+  font-family: a.$primaryFont;
+  h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: a.$navy;
+    margin-bottom: 2rem;
+    position: relative;
+    font-family: a.$primaryFont;
+    font-weight: lighter;
+    color: a.$mediumGray;
+
+    // &::after {
+    //   content: '';
+    //   position: absolute;
+    //   bottom: -0.5rem;
+    //   left: 50%;
+    //   transform: translateX(-50%);
+    //   width: 90px;
+    //   height: 3px;
+    //   background-color: rgba(128, 0, 32, 0.753);
+    //   border-radius: 2px;
+    // }
+  }
+  h3, h5{
+    color: a.$white;
+  }
+  h5{
+    font-size: .8rem;
+    font-weight: lighter;
+    font-family: a.$secondaryFont;
+  }
+  
 
   .story {
     position: relative;
@@ -13,7 +46,7 @@
     margin: 20px 0;
     transition: transform 0.3s ease;
     max-width: 100%;
-    background-color: #ff02022f;
+    background-color: a.$steel;
     border-radius: 15px;
     padding: 20px;
 
