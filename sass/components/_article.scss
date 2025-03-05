@@ -1,0 +1,227 @@
+@use "../abstracts" as a;
+@use "../abstracts/mixins" as m;
+
+
+.article-content {
+    padding: 4rem 0;
+    background-color: a.$backgroundColor;
+
+    .article-header {
+        text-align: center;
+        margin-bottom: 2rem;
+
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            font-family: a.$secondaryFont;
+            font-size: 0.9rem;
+            color: a.$textColor;
+
+            .article-category {
+                background: a.$burgundy;
+                color: a.$white;
+                padding: 0.5rem 1rem;
+                border-radius: 20px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+
+            .article-date, .article-author {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+        }
+
+        h1 {
+            color: a.$navy;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-family: a.$primaryFont;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+
+        .article-stats {
+            padding: 2rem 0;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            margin: 2rem 0;
+
+            .stats-container {
+                display: flex;
+                justify-content: center;
+                gap: 2rem;
+                flex-wrap: wrap;
+
+                .stat-item {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    color: #666;
+                    font-size: 1.1rem;
+                    transition: color 0.3s ease;
+
+                    i {
+                        font-size: 1.2rem;
+                    }
+
+                    &:hover {
+                        color: #007bff;
+                    }
+                }
+            }
+        }
+    }
+
+    .article-image {
+        width: 80%;
+        margin-bottom: 3rem;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        justify-content: center;
+        margin: 0 auto;
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 5px;
+        }
+    }
+
+    .article-body {
+        font-family: a.$secondaryFont;
+        color: a.$textColor;
+        line-height: 1.8;
+        font-size: 1.1rem;
+        width: 90%;
+        margin: 0 auto;
+
+        p {
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            color: a.$navy;
+            font-family: a.$primaryFont;
+            font-size: 1.8rem;
+            margin: 3rem 0 1.5rem;
+            font-weight: 500;
+        }
+
+        blockquote {
+            margin: 2rem 0;
+            padding: 2rem;
+            background: rgba(128, 0, 32, 0.05);
+            border-left: 4px solid a.$burgundy;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: a.$navy;
+            font-family: a.$primaryFont;
+        }
+    }
+
+    .article-footer {
+        margin-top: 4rem;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        width: 90%;
+        margin: 0 auto;
+
+
+        .article-tags {
+            margin-bottom: 2rem;
+            font-family: a.$secondaryFont;
+
+            span {
+                color: a.$textColor;
+                margin-right: 1rem;
+            }
+
+            a {
+                display: inline-block;
+                padding: 0.5rem 1rem;
+                background: rgba(128, 0, 32, 0.1);
+                color: a.$burgundy;
+                text-decoration: none;
+                border-radius: 20px;
+                margin: 0.5rem;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background: a.$burgundy;
+                    color: a.$white;
+                }
+            }
+        }
+
+        .article-share {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-family: a.$secondaryFont;
+
+            span {
+                color: a.$textColor;
+            }
+
+            .share-buttons {
+                display: flex;
+                gap: 1rem;
+
+                .share-btn {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    background: a.$navy;
+                    color: a.$white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-decoration: none;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        background: a.$burgundy;
+                        transform: translateY(-3px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Tablet and Desktop Styles
+@media screen and (min-width: 768px) {
+    .article-content {
+        padding: 6rem 0;
+
+        .article-header {
+            h1 {
+                font-size: 3rem;
+            }
+
+            .article-meta, .article-stats {
+                font-size: 1rem;
+            }
+        }
+
+        .article-body {
+            font-size: 1.2rem;
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            blockquote {
+                font-size: 1.4rem;
+                padding: 2.5rem;
+            }
+        }
+    }
+} 

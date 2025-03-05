@@ -3,33 +3,171 @@
 
 #LNews {
     font-family: a.$primaryFont;
-    font-weight: lighter;
-    font-size: 2rem;
-    text-align: center;
-    margin: 2rem 0;
+    padding: 4rem 0;
+    background-color: a.$backgroundColor;
 
     h1 {
         display: flex;
         align-items: center;
         justify-content: center;
         color: a.$navy;
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
         position: relative;
         font-family: a.$primaryFont;
         font-weight: lighter;
-        color: a.$mediumGray;
+        font-size: 1.5rem;
     
-        // &::after {
-        //   content: '';
-        //   position: absolute;
-        //   bottom: -0.5rem;
-        //   left: 50%;
-        //   transform: translateX(-50%);
-        //   width: 50%;
-        //   height: 3px;
-        //   background-color: a.$burgundy;
-        //   border-radius: 2px;
-        // }
-      }
-    
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -0.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90px;
+            height: 3px;
+            background-color: a.$burgundy;
+            border-radius: 2px;
+        }
+    }
+
+    .news-grid {
+        display: grid;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .news-card {
+        background: a.$white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .news-image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s ease;
+            }
+
+            .news-date {
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                background: a.$burgundy;
+                color: a.$white;
+                padding: 0.5rem 1rem;
+                border-radius: 20px;
+                font-size: 0.9rem;
+                font-family: a.$secondaryFont;
+            }
+
+            &:hover img {
+                transform: scale(1.05);
+            }
+        }
+
+        .news-content {
+            padding: 1.5rem;
+            justify-items: center;
+
+            h3 {
+                color: a.$navy;
+                font-size: 1.4rem;
+                margin-bottom: 1rem;
+                font-family: a.$primaryFont;
+                font-weight: 500;
+            }
+
+            p {
+                color: a.$textColor;
+                font-size: 1rem;
+                line-height: 1.6;
+                margin-bottom: 1.5rem;
+                font-family: a.$secondaryFont;
+                font-weight: 300;
+            }
+
+            .read-more {
+                display: inline-flex;
+                text-align: center;
+                align-items: baseline;
+                color: a.$burgundy;
+                text-decoration: none;
+                font-weight: 300;
+                font-family: a.$secondaryFont;
+                transition: color 0.3s ease;
+
+                i {
+                    margin-left: 0.5rem;
+                    transition: transform 0.3s ease;
+                }
+
+                &:hover {
+                    color: a.$navy;
+
+                    i {
+                        transform: translateX(5px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Tablet and DesktopStyles
+@media screen and (min-width: 768px) {
+    #LNews {
+        padding: 6rem 0;
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .news-grid {
+            gap: 2.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .news-card {
+            width: 40%;
+            @media screen and (min-width: 1024px) {
+                width: 30%;
+            }
+            .news-image {
+                height: 250px;
+                @media screen and (min-width: 1024px) {
+                    height: 300px;
+                }
+            }
+
+            .news-content {
+                padding: 2rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                h3 {
+                    font-size: 1.6rem;
+                }
+
+                p {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
 }
