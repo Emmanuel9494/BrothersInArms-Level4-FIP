@@ -11,7 +11,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     padding: 0 2rem;
 
@@ -28,7 +28,8 @@ footer {
           justify-content: center; // Centers horizontally
           align-items: center; // Centers vertically
           img {
-            max-width: 300px; // Adjust the size of the logo as needed
+            width: 100%; // Adjust the size of the logo as needed
+            max-width: 300px; // Ensure the logo doesn't exceed this width
           }
         }
 
@@ -164,17 +165,44 @@ footer {
 }
 
 // Responsive Design
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   footer {
     .footer-content {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+      h4 {
+        color: a.$white;
+      }
 
       .footer-section {
         margin: 1.5rem 0;
-        width: 100%;
-        max-width: 400px;
+        width: auto;
+        min-width: 250px;
+
+        &.about {
+          text-align: left;
+
+          #logo-footer {
+            display: block;
+          }
+
+          h4 {
+            text-align: left;
+            color: a.$white;
+          }
+        }
+
+        // &.links ul li {
+        //   text-align: left;
+        //   padding: 0 30%;
+        // }
+
+        &.social {
+          h4 {
+            text-align: left;
+          }
+        }
       }
     }
   }
