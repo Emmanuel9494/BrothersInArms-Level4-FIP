@@ -38,9 +38,9 @@ export function historyAnimation() {
     duration: 1,
   });
 
-  gsap.from(".story-card", {
+  gsap.from(".story", {
     scrollTrigger: {
-      trigger: ".personal-stories",
+      trigger: ".featured-stories",
       start: "top 80%",
     },
     opacity: 0,

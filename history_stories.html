@@ -25,7 +25,14 @@
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -33,7 +40,7 @@
     <!-- Plyr -->
     <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
     <!-- ------Javascript------ -->
-    
+
     <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
@@ -54,6 +61,7 @@
             <li><a href="victoriacrosses.html">Victoria Crosses</a></li>
             <li><a href="donors.html">Donors</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a href="#" class="donate-button">Donate</a></li>
           </ul>
         </div>
         <i class="fa fa-bars" onclick="showMenu()"></i>
@@ -75,27 +83,30 @@
       <!-- History of the Conflict -->
       <section class="section conflict-history">
         <h2>History of the Conflict</h2>
-        <div class="timeline">
-          <div class="timeline-item">
+        <div class="timeline grid-con">
+          <div class="timeline-item col-span-full l-col-span-4">
             <h3>Second Battle of Ypres (1915)</h3>
             <p>
               Indian Lahore Division helped Canadian troops withstand the first
               German gas attack.
             </p>
+            <img src="images/Ypres1915.jpg" alt="Ypres 1915" />
           </div>
-          <div class="timeline-item">
+          <div class="timeline-item col-span-full l-col-span-4">
             <h3>Battle of the Somme (1916)</h3>
             <p>
               Indian artillery supported Canadian forces in one of the war’s
               deadliest battles.
             </p>
+            <img src="images/somme.jpg" alt="Somme 1916" />
           </div>
-          <div class="timeline-item">
+          <div class="timeline-item col-span-full l-col-span-4">
             <h3>Battle of Vimy Ridge (1917)</h3>
             <p>
-              Indian regiments assisted Canadian forces in this historic
-              victory.
+              The Canadian Corps captured Vimy Ridge, a pivotal moment in
+              Canadian military history.
             </p>
+            <img src="images/vimy-ridge.jpg" alt="vimy-ridge 1917" />
           </div>
         </div>
       </section>
@@ -106,6 +117,7 @@
         <div class="event-grid">
           <div class="event-card">
             <h3>1914</h3>
+            <img src="images/history-1914.jpg" alt="History 1914" />
             <p>
               Indian Lahore Division arrives in France, aiding exhausted British
               forces.
@@ -113,6 +125,7 @@
           </div>
           <div class="event-card">
             <h3>1915</h3>
+            <img src="images/history-1915.jpg" alt="History 1915" />
             <p>
               Indians and Canadians fight together at Festubert and
               Passchendaele.
@@ -120,6 +133,7 @@
           </div>
           <div class="event-card">
             <h3>1918</h3>
+            <img src="images/history-1918.jpg" alt="History 1918" />
             <p>
               The Battle of Haifa, led by Indian cavalry, secures a key city
               from Ottoman control.
@@ -127,13 +141,14 @@
           </div>
           <div class="event-card">
             <h3>Siege of Kut</h3>
+            <img src="images/Siege-of-Kut.jpg" alt="Siege-of-Kut" />
             <p>Indian soldiers endured extreme hardships in Mesopotamia.</p>
           </div>
         </div>
       </section>
 
       <!-- Personal Stories -->
-      <section id="personal-stories" class="section personal-stories">
+      <!-- <section id="personal-stories" class="section personal-stories">
         <h2>Personal Stories from Soldiers</h2>
         <div class="stories-grid">
           <div class="story-card">
@@ -156,30 +171,145 @@
             <p>– A Sikh soldier at Neuve Chapelle.</p>
           </div>
         </div>
+      </section> -->
+
+      <section class="featured-stories section grid-con">
+        <h2 class="col-span-full">Personal Stories from Soldiers</h2>
+
+        <div class="story col-span-full m-col-span-4" data-lightbox="story1">
+          <h3>Brotherhood on the Battlefield</h3>
+          <h5>
+            The deep bond between Indian and Canadian soldiers during WW1.
+          </h5>
+          <p>
+            During World War I, over 135,000 Indian soldiers fought alongside
+            Canadian troops. These men, coming from different parts of the
+            British Empire, developed a strong camaraderie in the trenches.
+            Whether enduring brutal winter conditions in Europe or facing poison
+            gas attacks, their shared hardships created unbreakable bonds of
+            brotherhood.
+          </p>
+          <img
+            src="images/story1.jpg"
+            alt="Indian and Canadian soldiers together"
+          />
+        </div>
+
+        <div class="story col-span-full m-col-span-4" data-lightbox="story2">
+          <h3>The Hero of Haifa</h3>
+          <h5>
+            Major Dalpat Singh Shekhawat and the last cavalry charge in military
+            history.
+          </h5>
+          <img src="images/story2.jpg" alt="Major Dalpat Singh Shekhawat" />
+          <p>
+            On September 23, 1918, Major Dalpat Singh Shekhawat led the
+            legendary Jodhpur Lancers in the last successful cavalry charge in
+            military history. Against machine-gun fire, they stormed Haifa,
+            capturing the city from Ottoman forces. This victory not only
+            secured Haifa but also saved the Bahá'í leader from execution.
+          </p>
+        </div>
+
+        <div class="story col-span-full m-col-span-4" data-lightbox="story3">
+          <h3>Letters from the Trenches</h3>
+          <h5>
+            Personal letters from Indian and Canadian soldiers revealing their
+            thoughts and struggles.
+          </h5>
+          <img src="images/story3.jpg" alt="Letter from a soldier" />
+          <p>
+            Through letters sent home, soldiers shared their emotions, fears,
+            and experiences. One Rajput soldier wrote, "This is not war. It is
+            the ending of the world." A wounded Sikh lamented, "No sound man can
+            return to India." These letters capture the resilience, pain, and
+            humanity of the soldiers who fought in the Great War.
+          </p>
+        </div>
+        <div class="story col-span-full m-col-span-4" data-lightbox="story4">
+          <h3>The Forgotten Victoria Cross</h3>
+          <h5>
+            Sepoy Khudadad Khan: The first Indian recipient of the Victoria
+            Cross.
+          </h5>
+          <img src="images/story4.png" alt="Sepoy Khudadad Khan" />
+          <p>
+            In October 1914, Sepoy Khudadad Khan of the 129th Baluchis became
+            the first Indian soldier to receive the Victoria Cross. Despite
+            being gravely wounded, he continued manning his machine gun, holding
+            off the enemy long enough for reinforcements to arrive. His bravery
+            at the First Battle of Ypres was instrumental in preventing a German
+            breakthrough.
+          </p>
+        </div>
+
+        <div class="story col-span-full m-col-span-4" data-lightbox="story5">
+          <h3>The Battle of Neuve-Chapelle</h3>
+          <h5>
+            How Indian soldiers played a decisive role in a major Allied
+            victory.
+          </h5>
+          <img
+            src="images/story5.jpg"
+            alt="Indian soldiers at Neuve-Chapelle"
+          />
+          <p>
+            In March 1915, the Indian Corps was at the forefront of the Battle
+            of Neuve-Chapelle in France. Their relentless assault helped break
+            through German defenses, achieving a rare victory for the Allies.
+            However, the triumph came at a heavy cost, with thousands of Indian
+            troops making the ultimate sacrifice. Their courage demonstrated
+            their commitment to the war effort.
+          </p>
+        </div>
+
+        <div class="story col-span-full m-col-span-4" data-lightbox="story6">
+          <h3>Healing the Wounded</h3>
+          <h5>
+            Indian medical staff’s crucial role in saving lives during WWI.
+          </h5>
+          <img
+            src="images/story6.jpg"
+            alt="Indian stretcher-bearers treating the wounded"
+          />
+          <p>
+            Alongside the soldiers in the trenches, Indian doctors, nurses, and
+            stretcher-bearers played a critical role in World War I. They
+            treated the wounded under fire, often risking their own lives to
+            save others. Their dedication was vital in maintaining morale and
+            keeping thousands of soldiers alive in the brutal conditions of war.
+          </p>
+        </div>
+
+        <div class="story col-span-full m-col-span-4" data-lightbox="story7">
+          <h3>The Sikh Soldiers of Flanders</h3>
+          <h5>
+            The courage of Sikh regiments in the freezing trenches of Belgium.
+          </h5>
+          <img
+            src="images/story7.jpeg"
+            alt="Sikh soldiers in Belgium during WWI"
+          />
+          <p>
+            Sikh regiments were among the first Indian troops sent to the
+            Western Front. In the bitter cold of Flanders, they fought alongside
+            Canadian and British soldiers, facing relentless artillery
+            bombardments and gas attacks. Despite the harsh conditions, their
+            discipline and bravery earned them great respect, with some
+            regiments suffering over 80% casualties while holding their ground.
+          </p>
+        </div>
       </section>
 
       <!-- Letters from Soldiers -->
       <section class="section soldier-letters">
         <h2>Letters from Soldiers</h2>
-        <div class="letters-grid">
-          <div class="letter-card">
-            <p>
-              Indian soldiers marveled at literacy among French women and urged
-              their families to educate girls back home.
-            </p>
-          </div>
-          <div class="letter-card">
-            <p>
-              Soldiers described freezing conditions, poison gas attacks, and
-              the emotional toll of battle.
-            </p>
-          </div>
-          <div class="letter-card">
-            <p>
-              "The heart of India is broken… any man who comes here wounded is
-              returned thrice and four times to the trenches."
-            </p>
-          </div>
+        <div class="canadian-letter grid-con">
+          <h3 class="col-span-full">Canadian Soldiers' Letters</h3>
+        </div>
+
+        <div class="indian-letter grid-con">
+          <h3 class="col-span-full">Indian Soldiers' Letters</h3>
         </div>
       </section>
     </main>
@@ -238,7 +368,5 @@
         <p>Designed with <i class="fa fa-heart"></i> by M.A.A.K.E</p>
       </div>
     </footer>
-
-    
   </body>
 </html>
