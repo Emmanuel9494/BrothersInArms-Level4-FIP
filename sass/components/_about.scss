@@ -15,11 +15,11 @@
     padding: 0 2rem;
   }
 
-   h2 {
-  //   font-size: 2.5rem;
+  h2 {
+    //   font-size: 2.5rem;
     color: a.$mediumGray;
-  //   margin-bottom: 1.5rem;
-   }
+    //   margin-bottom: 1.5rem;
+  }
 
   // p {
   //   font-size: 1.2rem;
@@ -40,19 +40,19 @@
     .mission,
     .vision {
       flex: 1;
-      background-color: #0f1116;
+      background-color: a.$lightGray;
       padding: 2rem;
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       margin-bottom: 2rem;
-      p{
-        color: a.$white;
+      p {
+        color: a.$navy;
         font-family: a.$secondaryFont;
         font-weight: 200;
       }
 
       h2 {
-        color: a.$white;
+        color: a.$navy;
       }
     }
   }
@@ -92,6 +92,12 @@
     }
   }
 
+  .phase-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .purpose {
     margin: 4rem 0;
 
@@ -124,7 +130,7 @@
 
   .location {
     margin: 4rem 0;
-    
+
     h2 {
       color: a.$mediumGray;
       margin-bottom: 2rem;

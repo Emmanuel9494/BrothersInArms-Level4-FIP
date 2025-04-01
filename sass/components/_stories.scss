@@ -30,15 +30,15 @@
     //   border-radius: 2px;
     // }
   }
-  h3, h5{
-    color: a.$white;
+  h3,
+  h5 {
+    color: a.$navy;
   }
-  h5{
-    font-size: .8rem;
+  h5 {
+    // font-size: .8rem;
     font-weight: lighter;
     font-family: a.$secondaryFont;
   }
-  
 
   .story {
     position: relative;
@@ -46,7 +46,7 @@
     margin: 20px 0;
     transition: transform 0.3s ease;
     max-width: 100%;
-    background-color: a.$steel;
+    background-color: a.$lightGray;
     border-radius: 15px;
     padding: 20px;
 
@@ -106,6 +106,31 @@
       right: 15px;
       font-size: 24px;
       cursor: pointer;
+    }
+  }
+}
+
+.read-more {
+  display: inline-flex;
+  text-align: center;
+  align-items: baseline;
+  color: a.$burgundy;
+  text-decoration: none;
+  font-weight: 300;
+  font-family: a.$secondaryFont;
+  transition: color 0.3s ease;
+  font-weight: 500;
+
+  i {
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    color: a.$navy;
+
+    i {
+      transform: translateX(5px);
     }
   }
 }
