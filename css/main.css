@@ -52,7 +52,7 @@ input,
 label,
 textarea,
 select {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Roboto Flex", sans-serif;
   font-size: 16px;
   margin: 12px 0;
   line-height: 1.6;
@@ -1450,7 +1450,7 @@ nav .fa {
 .victoria-crosses-main .canadian-recipients p,
 .victoria-crosses-main .indian-recipients p,
 .victoria-crosses-main .hero-of-haifa p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.6;
   color: #2D3748;
   margin-bottom: 1.5rem;
@@ -1461,42 +1461,49 @@ nav .fa {
 .victoria-crosses-main .hero-of-haifa .image-container {
   text-align: center;
   margin-top: 2rem;
-  display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
 }
-.victoria-crosses-main .crosses-london .image-container .vc-image,
-.victoria-crosses-main .canadian-recipients .image-container .vc-image,
-.victoria-crosses-main .indian-recipients .image-container .vc-image,
-.victoria-crosses-main .hero-of-haifa .image-container .vc-image {
-  flex: 0 0 calc(20% - 1.2rem);
-  max-width: 100%;
+.victoria-crosses-main .crosses-london .image-container .vc-image-card,
+.victoria-crosses-main .canadian-recipients .image-container .vc-image-card,
+.victoria-crosses-main .indian-recipients .image-container .vc-image-card,
+.victoria-crosses-main .hero-of-haifa .image-container .vc-image-card {
+  text-align: center;
+  margin: 0 1rem;
+}
+.victoria-crosses-main .crosses-london .image-container .vc-image-card .vc-image,
+.victoria-crosses-main .canadian-recipients .image-container .vc-image-card .vc-image,
+.victoria-crosses-main .indian-recipients .image-container .vc-image-card .vc-image,
+.victoria-crosses-main .hero-of-haifa .image-container .vc-image-card .vc-image {
+  width: 100%;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
+  display: inline;
 }
 @media screen and (min-width: 768px) {
-  .victoria-crosses-main .crosses-london .image-container .vc-image,
-  .victoria-crosses-main .canadian-recipients .image-container .vc-image,
-  .victoria-crosses-main .indian-recipients .image-container .vc-image,
-  .victoria-crosses-main .hero-of-haifa .image-container .vc-image {
-    max-width: 30%;
+  .victoria-crosses-main .crosses-london .image-container .vc-image-card .vc-image,
+  .victoria-crosses-main .canadian-recipients .image-container .vc-image-card .vc-image,
+  .victoria-crosses-main .indian-recipients .image-container .vc-image-card .vc-image,
+  .victoria-crosses-main .hero-of-haifa .image-container .vc-image-card .vc-image {
+    max-width: 70%;
   }
 }
-.victoria-crosses-main .crosses-london .image-container .vc-image:hover,
-.victoria-crosses-main .canadian-recipients .image-container .vc-image:hover,
-.victoria-crosses-main .indian-recipients .image-container .vc-image:hover,
-.victoria-crosses-main .hero-of-haifa .image-container .vc-image:hover {
+.victoria-crosses-main .crosses-london .image-container .vc-image-card .vc-image:hover,
+.victoria-crosses-main .canadian-recipients .image-container .vc-image-card .vc-image:hover,
+.victoria-crosses-main .indian-recipients .image-container .vc-image-card .vc-image:hover,
+.victoria-crosses-main .hero-of-haifa .image-container .vc-image-card .vc-image:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
-@media (max-width: 768px) {
-  .victoria-crosses-main .crosses-london .image-container .vc-image,
-  .victoria-crosses-main .canadian-recipients .image-container .vc-image,
-  .victoria-crosses-main .indian-recipients .image-container .vc-image,
-  .victoria-crosses-main .hero-of-haifa .image-container .vc-image {
-    flex: 0 0 calc(50% - 0.75rem);
-  }
+.victoria-crosses-main .crosses-london .image-container .vc-image-card .caption,
+.victoria-crosses-main .canadian-recipients .image-container .vc-image-card .caption,
+.victoria-crosses-main .indian-recipients .image-container .vc-image-card .caption,
+.victoria-crosses-main .hero-of-haifa .image-container .vc-image-card .caption {
+  font-size: 0.7rem;
+  font-style: italic;
+  color: #666;
+  margin-top: 0.5rem;
 }
 .victoria-crosses-main .crosses-london .recipient-list ul,
 .victoria-crosses-main .canadian-recipients .recipient-list ul,
@@ -1560,30 +1567,7 @@ nav .fa {
 .victoria-crosses-main .indian-recipients .recipient-card p,
 .victoria-crosses-main .hero-of-haifa .recipient-card p {
   margin-bottom: 1rem;
-  font-size: 1.1rem;
-}
-.victoria-crosses-main .crosses-london .haifa-image,
-.victoria-crosses-main .canadian-recipients .haifa-image,
-.victoria-crosses-main .indian-recipients .haifa-image,
-.victoria-crosses-main .hero-of-haifa .haifa-image {
-  text-align: center;
-  margin: 2.5rem 0;
-}
-.victoria-crosses-main .crosses-london .haifa-image .haifa-img,
-.victoria-crosses-main .canadian-recipients .haifa-image .haifa-img,
-.victoria-crosses-main .indian-recipients .haifa-image .haifa-img,
-.victoria-crosses-main .hero-of-haifa .haifa-image .haifa-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  transition: transform 0.2s ease;
-}
-.victoria-crosses-main .crosses-london .haifa-image .haifa-img:hover,
-.victoria-crosses-main .canadian-recipients .haifa-image .haifa-img:hover,
-.victoria-crosses-main .indian-recipients .haifa-image .haifa-img:hover,
-.victoria-crosses-main .hero-of-haifa .haifa-image .haifa-img:hover {
-  transform: scale(1.02);
+  font-size: 0.9rem;
 }
 @media (max-width: 768px) {
   .victoria-crosses-main {
@@ -1606,8 +1590,19 @@ nav .fa {
   .victoria-crosses-main .canadian-recipients p,
   .victoria-crosses-main .indian-recipients p,
   .victoria-crosses-main .hero-of-haifa p {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
+}
+
+.vc-quote {
+  font-style: italic;
+  padding: 1.5rem;
+  background: #E2E8F0;
+  border-top: 1px solid #FF8224;
+  margin-top: 2rem;
+}
+.vc-quote blockquote {
+  color: #FF8224;
 }
 
 .donors-header {
