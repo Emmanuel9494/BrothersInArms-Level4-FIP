@@ -25,7 +25,10 @@
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -33,7 +36,7 @@
     <!-- Plyr -->
     <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
     <!-- ------Javascript------ -->
-    
+
     <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
@@ -76,8 +79,22 @@
     <main class="victoria-crosses-main">
       <section class="crosses-london">
         <div class="content-wrapper">
-          <h2>Crosses from London</h2>
-          <div class="image-container">
+          <h2>Victoria Crosses</h2>
+          <p>
+            The Victoria Cross (VC) is the highest military decoration awarded
+            for valour "in the face of the enemy" to members of the British
+            Armed Forces. Instituted in 1856 by Queen Victoria, the bronze cross
+            is cast from the metal of cannons captured during the Crimean War.
+          </p>
+          <h4>Crosses from London</h4>
+          <p>
+            London holds a special connection to the VC - not only is it awarded
+            by the British monarch at Buckingham Palace, but many recipients are
+            commemorated across the city. From memorial plaques to the iconic
+            Victoria Cross Gallery at the Imperial War Museum, their
+            extraordinary bravery is forever remembered.
+          </p>
+          <!-- <div class="image-container">
             <img
               src="images/victoria-cross-medal-3.png"
               alt="Victoria Cross Medal"
@@ -93,57 +110,93 @@
               alt="Victoria Cross Medal"
               class="vc-image"
             />
+          </div> -->
+
+          <div class="image-container grid-con">
+            <div class="vc-image-card col-span-full m-col-span-4">
+              <img
+                src="images/VC-William-Hall.jpg"
+                alt="VC William Hall"
+                class="vc-image"
+              />
+              <p class="caption">
+                The first Black person, the first Nova Scotian, and the third
+                Canadian to receive the Victoria Cross.
+              </p>
+            </div>
+            <div class="vc-image-card col-span-full m-col-span-4">
+              <img
+                src="images/victoria-cross-medal.png"
+                alt="Victoria Cross Medal"
+                class="vc-image"
+              />
+              <p class="caption">
+                A modern representation of the Victoria Cross, continuing the
+                tradition of honoring bravery in battle.
+              </p>
+            </div>
+            <div class="vc-image-card col-span-full m-col-span-4">
+              <img
+                src="images/victoria-cross-medal-2.jpg"
+                alt="Victoria Cross Medal"
+                class="vc-image"
+              />
+              <p class="caption">
+                A blank Victoria Cross, which is awarded for extraordinary
+                bravery in combat.
+              </p>
+            </div>
+            <div class="vc-image-card col-span-full m-col-start-3 m-col-span-4">
+              <img
+                src="images/victoria-cross-medal-3.png"
+                alt="Victoria Cross Medal"
+                class="vc-image"
+              />
+              <p class="caption">
+                The Canadian version of the Victoria Cross, inscribed with "Pro
+                Valore," meaning "For Valour."
+              </p>
+            </div>
+            <div class="vc-image-card col-span-full m-col-span-4">
+              <img
+                src="images/victoria-cross-medal-4.png"
+                alt="Victoria Cross Medal"
+                class="vc-image"
+              />
+              <p class="caption">
+                The original British Victoria Cross, awarded for acts of valor
+                in the presence of the enemy.
+              </p>
+            </div>
+          </div>
+
+          <div class="vc-quote">
+            <blockquote>
+              "For most conspicuous bravery, or some daring or pre-eminent act
+              of valour or self-sacrifice, or extreme devotion to duty in the
+              presence of the enemy."
+            </blockquote>
+            <p>— Original warrant establishing the Victoria Cross, 1856</p>
           </div>
         </div>
       </section>
 
       <section class="canadian-recipients">
-        <div class="content-wrapper">
-          <h2>Canadian Recipients</h2>
-          <p>69 Canadian soldiers received the Victoria Cross during WW1.</p>
-          <div class="recipient-list">
-            <ul>
-              <li>Name 1 - Details</li>
-              <li>Name 2 - Details</li>
-              <li>Name 3 - Details</li>
-            </ul>
-          </div>
+        <div class="content-wrapper grid-con">
+          <h2 class="col-span-full">Canadian Recipients</h2>
+          <h5 class="col-span-full">
+            69 Canadian soldiers received the Victoria Cross during WW1.
+          </h5>
         </div>
       </section>
 
       <section class="indian-recipients">
         <div class="content-wrapper grid-con">
           <h2 class="col-span-full">Indian Recipients</h2>
-          <div class="recipient-card col-span-full m-col-span-4">
-            <h3>Gabbar Singh Negi</h3>
-            <p>39th Garhwal Rifles, awarded for gallantry.</p>
-          </div>
-          <div class="recipient-card col-span-full m-col-span-4">
-            <h3>Khudadad Khan</h3>
-            <p>129th Baluchis, first Indian Victoria Cross recipient.</p>
-          </div>
-          <div class="recipient-card col-span-full m-col-span-4">
-            <h3>Kulbir Thapa</h3>
-            <p>3rd Gurkha Rifles, recognized for heroism in France.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="hero-of-haifa">
-        <div class="content-wrapper">
-          <h2>The Hero of Haifa</h2>
-          <p>
-            Major Dalpat Singh Shekhawat led the last successful cavalry charge
-            in military history, capturing Haifa from Ottoman forces and saving
-            the Bahá'í leader from execution.
-          </p>
-          <div class="haifa-image">
-            <img
-              src="images/story2.jpg"
-              alt="Haifa Cavalry Charge"
-              class="haifa-img"
-            />
-          </div>
+          <h5 class="col-span-full">
+            During World War I, 11 Indian Soldiers received a Victoria Cross
+            medal for their bravery.
+          </h5>
         </div>
       </section>
     </main>
@@ -202,7 +255,5 @@
         <p>Designed with <i class="fa fa-heart"></i> by M.A.A.K.E</p>
       </div>
     </footer>
-
-    
   </body>
 </html>
