@@ -25,7 +25,10 @@
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -33,7 +36,7 @@
     <!-- Plyr -->
     <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
     <!-- ------Javascript------ -->
-    
+
     <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
@@ -65,7 +68,8 @@
       <div class="header-content">
         <h1>Support Our Cause – Make a Difference Today</h1>
         <p>
-          Donate today and help us make a lasting impact. Together, we can build a better future!
+          Donate today and help us make a lasting impact. Together, we can build
+          a better future!
         </p>
       </div>
     </header>
@@ -75,14 +79,30 @@
     <main class="donors-main">
       <section class="donors-intro">
         <div class="intro-content">
-          <h2>List of Donors</h2>
-          <p>
+          <h2>Honoring Our Generous Donors</h2>
+          <p class="intro-text">
             We are deeply grateful to all our donors who have contributed to
-            preserving the legacy of our heroes.
+            preserving the legacy of our heroes. Your generosity helps us
+            maintain the memorial, develop educational programs, and ensure
+            these stories of courage are never forgotten.
           </p>
+          <div class="impact-stats">
+            <div class="stat">
+              <span class="number">$250,000+</span>
+              <span class="label">Raised to Date</span>
+            </div>
+            <div class="stat">
+              <span class="number">500+</span>
+              <span class="label">Individual Donors</span>
+            </div>
+            <div class="stat">
+              <span class="number">45</span>
+              <span class="label">Corporate Sponsors</span>
+            </div>
+          </div>
           <img
-            src="images/donors-hero.jpeg"
-            alt="Donors Hero Image"
+            src="images/donors-hero.png"
+            alt="Community members viewing memorial plaques"
             class="donors-hero-img"
           />
         </div>
@@ -91,6 +111,26 @@
       <section class="donors-table">
         <h2 class="hidden">Donors Table</h2>
         <h3>Our Contributors</h3>
+        <div class="table-controls">
+          <!-- <div class="search-box">
+            <input
+              type="text"
+              placeholder="Search donors..."
+              id="donor-search"
+            />
+            <button class="search-btn"><i class="fa fa-search"></i></button>
+          </div>
+          <div class="filter-options">
+            <label for="campaign-filter">Filter by Campaign:</label>
+            <select id="campaign-filter">
+              <option value="all">All Campaigns</option>
+              <option value="Memorial Pathway">Memorial Pathway</option>
+              <option value="Educational Displays">Educational Displays</option>
+              <option value="Plaques & Tribute">Plaques & Tribute</option>
+              <option value="Maintenance Fund">Maintenance Fund</option>
+            </select>
+          </div> -->
+        </div>
         <table>
           <thead>
             <tr>
@@ -115,58 +155,243 @@
               <td>Plaques &amp; Tribute</td>
               <td>$10,000</td>
             </tr>
-            <!-- Add more rows as needed -->
+            <tr>
+              <td>Veterans Association</td>
+              <td>Maintenance Fund</td>
+              <td>$7,500</td>
+            </tr>
+            <tr>
+              <td>Robert Johnson</td>
+              <td>Educational Displays</td>
+              <td>$1,000</td>
+            </tr>
+            <tr>
+              <td>Patriot Bank</td>
+              <td>Memorial Pathway</td>
+              <td>$15,000</td>
+            </tr>
+            <tr>
+              <td>Sarah Williams</td>
+              <td>Plaques &amp; Tribute</td>
+              <td>$3,200</td>
+            </tr>
+            <tr>
+              <td>Heritage Foundation</td>
+              <td>Educational Displays</td>
+              <td>$8,000</td>
+            </tr>
           </tbody>
         </table>
+        <!-- <div class="pagination">
+          <button class="page-btn active">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+          <span class="ellipsis">...</span>
+          <button class="page-btn">10</button>
+          <button class="next-btn">Next &raquo;</button>
+        </div> -->
+        <a href="#" class="read-more"
+          >Read More <i class="fa fa-arrow-right"></i
+        ></a>
       </section>
 
-      <section class="why-donate">
-        <h2>Why You Should Donate</h2>
-        <div class="donate-reasons">
-          <div class="reason">
+      <section class="featured-donor">
+        <h2>Donor Spotlight</h2>
+        <div class="spotlight-content">
+          <div class="donor-photo">
             <img
-              src="images/soldier_indian_reference.jpg"
-              alt="Preserve History"
+              src="images/featured-donor.png"
+              alt="Featured donor Sarah Williams"
             />
-            <h3>Preserve History</h3>
-            <p>Ensure future generations learn about these unsung heroes.</p>
           </div>
-          <div class="reason">
-            <img
-              src="images/Memorial-Site-Plan.jpeg"
-              alt="Support the Memorial"
-            />
-            <h3>Support the Memorial</h3>
-            <p>
-              Help build a lasting tribute with pathways, plaques, and
-              educational displays.
-            </p>
-          </div>
-          <div class="reason">
-            <img src="images/pose_reference4.jpg" alt="Honor Their Sacrifice" />
-            <h3>Honor Their Sacrifice</h3>
-            <p>Commemorate the soldiers who fought for freedom and justice.</p>
+          <div class="donor-story">
+            <h3>Sarah Williams</h3>
+            <p class="donation-info">Contributed $3,200 to Plaques & Tribute</p>
+            <blockquote>
+              "My grandfather served in this regiment, and donating to this
+              memorial is my way of ensuring his sacrifice and those of his
+              comrades are never forgotten. Every time I visit, I see children
+              learning from the displays, and that makes every penny
+              worthwhile."
+            </blockquote>
+            <a href="#" class="read-more"
+              >Read More <i class="fa fa-arrow-right"></i
+            ></a>
           </div>
         </div>
       </section>
 
+      <section class="why-donate">
+        <h2>Why Your Donation Matters</h2>
+        <div class="donate-reasons">
+          <div class="reason">
+            <img
+              src="images/soldier_indian_reference.jpg"
+              alt="Students learning at memorial displays"
+            />
+            <h3>Preserve History</h3>
+            <p>
+              Ensure future generations learn about these unsung heroes through
+              our interactive displays and digital archives. Your donation helps
+              us collect oral histories, preserve artifacts, and create
+              educational materials.
+            </p>
+          </div>
+          <div class="reason">
+            <img
+              src="images/Memorial-Site-Plan.jpeg"
+              alt="Architectural rendering of memorial expansion"
+            />
+            <h3>Support the Memorial</h3>
+            <p>
+              Help build a lasting tribute with pathways, plaques, and
+              educational displays. We're currently expanding to include a
+              meditation garden and visitor center - your support makes these
+              projects possible.
+            </p>
+          </div>
+          <div class="reason">
+            <img
+              src="images/pose_reference4.jpg"
+              alt="Veteran visiting memorial"
+            />
+            <h3>Honor Their Sacrifice</h3>
+            <p>
+              Commemorate the soldiers who fought for freedom and justice. Each
+              donation helps us maintain the memorial grounds and organize
+              annual remembrance ceremonies attended by veterans and their
+              families.
+            </p>
+          </div>
+        </div>
+        <div class="donation-cta">
+          <p>Ready to make a difference?</p>
+          <a href="#" class="donate-button">Donate</a>
+        </div>
+      </section>
+
       <section class="donor-recognition">
-        <h2>Donor Recognition</h2>
+        <h2>Donor Recognition Programs</h2>
+        <p class="recognition-intro">
+          We believe in celebrating every contribution, no matter the size.
+          Here's how we recognize our generous supporters:
+        </p>
+
         <div class="recognition-levels">
           <div class="level">
-            <i class="fa fa-star"></i>
-            <h3>Major Contributors</h3>
-            <p>Recognized on plaques at the memorial.</p>
+            <i class="fa fa-star gold"></i>
+            <h3>Major Contributors ($5,000+)</h3>
+            <ul>
+              <li>Permanent recognition on memorial plaques</li>
+              <li>Invitation to annual donor appreciation event</li>
+              <li>Featured in our annual report</li>
+              <li>VIP seating at memorial ceremonies</li>
+            </ul>
           </div>
           <div class="level">
-            <i class="fa fa-users"></i>
-            <h3>Community Donors</h3>
-            <p>Featured in donor lists on the website.</p>
+            <i class="fa fa-users blue"></i>
+            <h3>Community Donors ($500-$4,999)</h3>
+            <ul>
+              <li>Featured in donor lists on the website</li>
+              <li>Recognition in quarterly newsletter</li>
+              <li>Certificate of appreciation</li>
+              <li>Early access to event tickets</li>
+            </ul>
           </div>
           <div class="level">
-            <i class="fa fa-building"></i>
+            <i class="fa fa-building green"></i>
             <h3>Corporate &amp; Institutional Supporters</h3>
-            <p>Highlighted in sponsorship sections.</p>
+            <ul>
+              <li>Highlighted in sponsorship sections</li>
+              <li>Logo placement on relevant materials</li>
+              <li>Opportunity to sponsor specific memorial elements</li>
+              <li>Team volunteer days at the memorial</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="naming-opportunities">
+          <h3>Special Naming Opportunities</h3>
+          <p>Consider these meaningful ways to leave a lasting legacy:</p>
+          <div class="opportunities-grid">
+            <div class="opportunity">
+              <h4>Memorial Bench</h4>
+              <p>$2,500</p>
+              <p>Includes engraved plaque</p>
+            </div>
+            <div class="opportunity">
+              <h4>Educational Kiosk</h4>
+              <p>$7,500</p>
+              <p>Digital display with donor recognition</p>
+            </div>
+            <div class="opportunity">
+              <h4>Pathway Segment</h4>
+              <p>$10,000</p>
+              <p>20-foot section with donor marker</p>
+            </div>
+            <div class="opportunity">
+              <h4>Garden Plaza</h4>
+              <p>$25,000</p>
+              <p>Central gathering space with prominent recognition</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="donation-faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <div class="faq-item">
+            <button class="faq-question">
+              How can I make a donation?<i class="fa fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                You can donate online through our secure portal, by mailing a
+                check to our office, or by calling us to make a credit card
+                donation over the phone. We also accept stock transfers and can
+                discuss planned giving options.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Is my donation tax-deductible?<i class="fa fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes, we are a registered 501(c)(3) nonprofit organization. All
+                donations are tax-deductible to the extent allowed by law. You
+                will receive a receipt for tax purposes for any donation of $250
+                or more.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Can I make a recurring donation?<i class="fa fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Absolutely! Many of our supporters choose to make monthly or
+                quarterly donations. You can set this up through our online
+                donation system or by contacting our donor relations team.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              How are donations used?<i class="fa fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                85% of all donations go directly to memorial maintenance,
+                educational programs, and preservation efforts. 10% supports
+                administrative costs, and 5% goes to fundraising efforts to
+                sustain our mission. You can designate your gift to specific
+                programs if preferred.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -226,7 +451,5 @@
         <p>Designed with <i class="fa fa-heart"></i> by M.A.A.K.E</p>
       </div>
     </footer>
-
-    
   </body>
 </html>
