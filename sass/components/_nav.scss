@@ -8,6 +8,13 @@
   z-index: 1000;
   background-color: a.$mediumGray;
 }
+#nav-logo {
+ width: 24%;
+ img {
+    width: 100%;
+  }
+  
+}
 
 nav {
   display: flex;
@@ -38,21 +45,22 @@ nav {
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
 
     ul {
-      // padding: 2rem 0;
-
+      width: 100%;
+    
       li {
         list-style: none;
         display: block;
         padding: 8px 12px;
         position: relative;
-
+        cursor: pointer;
+    
         a {
           color: a.$white;
           text-decoration: none;
-          font-size: 14px;
+          font-size: 12px;
           font-family: a.$secondaryFont;
         }
-
+    
         &::after {
           content: "";
           width: 0%;
@@ -60,14 +68,21 @@ nav {
           background: a.$gold;
           display: block;
           margin: auto;
-          transition: 0.05s;
+          transition: 0.2s ease;
         }
-
+    
         &:hover::after {
           width: 100%;
         }
+    
+        &.active::after {
+          width: 100%;
+        }
+    
+    
       }
     }
+    
   }
 
   .fa {
