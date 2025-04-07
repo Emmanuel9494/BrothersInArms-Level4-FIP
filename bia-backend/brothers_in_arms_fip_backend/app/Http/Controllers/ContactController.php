@@ -46,30 +46,16 @@ class ContactController extends Controller {
 
     public function save(Request $request) {
         $this->validate($request, [
-            'name' => 'required|string',
-            'email' => 'required|string',
-            'volunteer_type' => 'required|string',
-            'message' => 'required|string'
+            'name' => 'required',
+            'email' => 'required|email',
+            'volunteer_type' => 'required',
+            'message' => 'required'
         ]);
-    
-        // Fetch the corresponding interest_id based on volunteer_type
-        $interest = Interest::where('volunteer', $request->volunteer_type)->first();
-    
-        if (!$interest) {
-            return response()->json(['error' => 'Invalid volunteer type.'], 400);
-        }
-    
-        // Add the interests_id dynamically
-        $contacts = Contact::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'volunteer_type' => $request->volunteer_type,
-            'message' => $request->message,
-            'interests_id' => $interest->id, // foreign key 
-        ]);
-    
+
+        $contacts = Contact::create($request->all());
         return response()->json($contacts, 201);
     }
+
 
     public function update(Request $request, $id){
 
