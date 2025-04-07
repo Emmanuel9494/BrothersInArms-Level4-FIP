@@ -168,4 +168,48 @@
       transform: translateY(0);
     }
   }
+
+  .button__circle {
+    width: 80px;
+    height: 80px;
+    background: mediumseagreen;
+    border-radius: 50%;
+    transform: rotate(-180deg);
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  font-size: 2.25rem;
+}
+
+.success-message {
+  color: a.$gold;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.error-messages li {
+  color: a.$gold;
+  font-size: 1.25rem;
+  font-weight: 600;
+  // text-align: center;
+}
+
+#flower-animation {
+  position: absolute;
+  top: 30px;
+  left: -30%;
+  transform: translate(50%, -50%);
+ 
+  img{
+    width: 100%;
+    height: 100%;
+  }
+}
+
 }
