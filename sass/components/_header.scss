@@ -64,11 +64,11 @@
     h1 {
       margin-bottom: 1.5rem;
       // color: a.$gold;
-      background: linear-gradient(to right, a.$burgundy, a.$gold, a.$offWhite);
+      background: linear-gradient(to bottom, a.$burgundy, a.$gold, a.$offWhite);
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
-      // text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      text-shadow: 2px 2px 4px rgba(235, 170, 30, 0.178);
       // font-size: 2.5rem;
       font-family: a.$primaryFont;
     }

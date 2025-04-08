@@ -36,10 +36,10 @@ $router->delete('/contacts/delete/{id}', 'ContactController@delete');
 
 // routes for the DonorController
 $router->get('/donors', 'DonorController@getAll');
-// $router->get('/donors/{id}', 'DonorController@getOne');
-// $router->post('/donors/add', 'DonorController@save');
-// $router->post('/donors/edit/{id}', 'DonorController@update');
-// $router->delete('/donors/delete/{id}', 'DonorController@delete');
+$router->get('/donors/{id}', 'DonorController@getOne');
+$router->post('/donors/add', 'DonorController@save');
+$router->post('/donors/edit/{id}', 'DonorController@update');
+$router->delete('/donors/delete/{id}', 'DonorController@delete');
 
 // routes for the HeadlineController
 $router->get('/headlines', 'HeadlineController@getAll');

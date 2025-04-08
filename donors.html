@@ -37,9 +37,9 @@
     <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
     <!-- ------Javascript------ -->
 
-    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script defer src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
     <script defer src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script type="module" defer src="js/donors.js"></script>
   </head>
@@ -109,30 +109,13 @@
         </div>
       </section>
 
-      <section class="donors-table">
+      <!-- Donors Table-->
+      <section class="donors-table" id="donorsApp">
         <h2 class="hidden">Donors Table</h2>
         <h3>Our Contributors</h3>
-        <div class="table-controls">
-          <!-- <div class="search-box">
-            <input
-              type="text"
-              placeholder="Search donors..."
-              id="donor-search"
-            />
-            <button class="search-btn"><i class="fa fa-search"></i></button>
-          </div>
-          <div class="filter-options">
-            <label for="campaign-filter">Filter by Campaign:</label>
-            <select id="campaign-filter">
-              <option value="all">All Campaigns</option>
-              <option value="Memorial Pathway">Memorial Pathway</option>
-              <option value="Educational Displays">Educational Displays</option>
-              <option value="Plaques & Tribute">Plaques & Tribute</option>
-              <option value="Maintenance Fund">Maintenance Fund</option>
-            </select>
-          </div> -->
-        </div>
-        <table>
+      
+        <table >
+         
           <thead>
             <tr>
               <th>Name</th>
@@ -140,61 +123,22 @@
               <th>Amount</th>
             </tr>
           </thead>
+          
           <tbody>
-            <tr>
-              <td>John Doe</td>
-              <td>Memorial Pathway</td>
-              <td>$5,000</td>
-            </tr>
-            <tr>
-              <td>Jane Smith</td>
-              <td>Educational Displays</td>
-              <td>$2,500</td>
-            </tr>
-            <tr>
-              <td>ABC Corporation</td>
-              <td>Plaques &amp; Tribute</td>
-              <td>$10,000</td>
-            </tr>
-            <tr>
-              <td>Veterans Association</td>
-              <td>Maintenance Fund</td>
-              <td>$7,500</td>
-            </tr>
-            <tr>
-              <td>Robert Johnson</td>
-              <td>Educational Displays</td>
-              <td>$1,000</td>
-            </tr>
-            <tr>
-              <td>Patriot Bank</td>
-              <td>Memorial Pathway</td>
-              <td>$15,000</td>
-            </tr>
-            <tr>
-              <td>Sarah Williams</td>
-              <td>Plaques &amp; Tribute</td>
-              <td>$3,200</td>
-            </tr>
-            <tr>
-              <td>Heritage Foundation</td>
-              <td>Educational Displays</td>
-              <td>$8,000</td>
+            <tr v-for="donor in donors" :key="donor.id">
+              <td>{{ donor.donor_name }}</td>
+              <td>{{ donor.campaign }}</td>
+              <td>${{ donor.amount }}</td>
             </tr>
           </tbody>
         </table>
-        <!-- <div class="pagination">
-          <button class="page-btn active">1</button>
-          <button class="page-btn">2</button>
-          <button class="page-btn">3</button>
-          <span class="ellipsis">...</span>
-          <button class="page-btn">10</button>
-          <button class="next-btn">Next &raquo;</button>
-        </div> -->
-        <a href="#" class="read-more"
-          >Read More <i class="fa fa-arrow-right"></i
-        ></a>
+        <p v-if="error">{{ error }}</p>
+      
+        <a href="#" class="read-more">
+          Read More <i class="fa fa-arrow-right"></i>
+        </a>
       </section>
+       <!-- Donors Table -->
 
       <section class="featured-donor">
         <h2>Donor Spotlight</h2>

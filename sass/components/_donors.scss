@@ -439,6 +439,8 @@ table {
       padding-left: 1rem;
       margin: 1.5rem 0;
       color: #555;
+      font-size: 1.2rem;
+      line-height: 1.5;
     }
   }
 }
@@ -603,7 +605,7 @@ table {
     }
 
     p:last-of-type {
-      font-size: 0.9rem;
+      font-size: 1.1rem;
       color: #666;
     }
   }
@@ -659,6 +661,11 @@ table {
     &:hover {
       background: #e9e9e9;
     }
+  }
+
+#loading-donor-animation{
+  display: flex;
+  justify-content: center;
   }
 
   .faq-answer {

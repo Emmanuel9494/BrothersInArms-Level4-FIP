@@ -22,6 +22,8 @@ class DonorController extends Controller {
 
      public function getOne($id) {
         // I am ignoring this fuction for now
+        $donors = Donor::select('id','donor_name','campaign','amount')->where('donors.id', '=', $id)->get();
+         return response()->json($donors);
         
      }
 
@@ -40,7 +42,15 @@ class DonorController extends Controller {
 
 
     public function update(Request $request, $id) {
-        // I am ignoring this fuction for now
+        $this->validate($request, [
+            'donor_name' => 'required|string',
+            'campaign' => 'required|string',
+            'amount' => 'required|integer'
+        ]);
+
+        $donors = Donor::findOrFail($id);
+        $donors->update($request->all());
+        return response()->json($donors, 200);
         
     }
     
