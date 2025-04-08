@@ -94,8 +94,8 @@ export function contactApp() {
                     },
                     body: new URLSearchParams(this.formData)
                 })
-                .then(async (response) => {
-                    const data = await response.json();
+                .then((response) => {
+                    const data = response.json();
 
                     if (!response.ok) {
                         if (data.errors) {
