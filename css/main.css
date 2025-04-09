@@ -1366,7 +1366,7 @@ nav .fa {
   color: #111418;
 }
 
-#player-container {
+.player-container {
   margin: 2rem auto;
   border-radius: 8px;
   overflow: hidden;
@@ -1374,7 +1374,7 @@ nav .fa {
   background-color: #1D3557;
   position: relative;
 }
-#player-container::before {
+.player-container::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1385,6 +1385,26 @@ nav .fa {
   z-index: 1;
 }
 
+.video-mobile {
+  display: block;
+}
+
+.video-wedpage {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .video-mobile {
+    display: none;
+  }
+  .video-wedpage {
+    display: block;
+  }
+  .video-wedpage video {
+    width: 100%;
+    height: auto;
+  }
+}
 .client-info {
   text-align: center;
   padding: 2rem;
