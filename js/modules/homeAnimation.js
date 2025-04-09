@@ -1,8 +1,6 @@
 export function homeAnimation() {
-  // homeAnimation.js
   gsap.registerPlugin(ScrollTrigger);
 
-  // Hero section animations
   gsap.from(".header img, .nav-links", {
     duration: 1,
     y: -50,

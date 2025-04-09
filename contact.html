@@ -4,11 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Brother's In Arms -B.I.A</title>
-    <link
-      rel="icon" type="image/png" href="favicon/favicon-96x96.png"/>
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" />
     <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
     <link rel="shortcut icon" href="favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
     <meta name="apple-mobile-web-app-title" content="Brother In Arms" />
     <link rel="manifest" href="favicon/site.webmanifest" />
     <link href="css/reset.css" rel="stylesheet" />
@@ -17,20 +20,23 @@
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <!-- Plyr -->
     <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
-      <!-- ------Javascript------ -->
-      
-      <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
-      <script defer src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-      <script type="module" defer src="js/contact.js"></script>
+    <!-- ------Javascript------ -->
+
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script defer src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script type="module" defer src="js/contact.js"></script>
   </head>
   <body>
     <section class="nav-con">
@@ -79,10 +85,6 @@
             <i class="fa fa-phone"></i>
             <p>Phone: +1 (123) 456-7890</p>
           </div>
-          <!-- <div class="contact-item">
-            <i class="fa fa-globe"></i>
-            <p>Website: <a href="#">www.brothersinarmsmemorial.com</a></p>
-          </div> -->
         </div>
         <div class="social-media">
           <a href="#" class="social-icon"><i class="fa fa-facebook"></i></a>
@@ -93,37 +95,6 @@
         </div>
         <a href="#" class="donate-button">Donate</a>
       </section>
-<!-- INITIAL FORM CONTACT START -->
-      <!-- <section class="contact-form">
-        <h2>Send Us a Message</h2>
-        <form id="contactForm">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-          <div class="form-group">
-            <label for="volunteer">Volunteer Interest</label>
-            <select id="volunteer" name="volunteer">
-              <option value="event-planning">Event Planning</option>
-              <option value="fundraising">Fundraising</option>
-              <option value="community-outreach">Community Outreach</option>
-              <option value="others">Others</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-          </div>
-          <button type="submit" class="submit-button">Submit</button>
-        </form>
-      </section> -->
-      <!-- INITIAL CONTACT FORM END -->
-
-
 
       <!-- VUE CONTACT FORM START -->
       <section id="contactApp" class="contact-form">
@@ -143,7 +114,11 @@
             <label for="volunteer">Volunteer Interest</label>
             <select id="volunteer" v-model="formData.volunteer_type">
               <option value="">Select an interest</option>
-              <option v-for="interest in interests" :key="interest.id" :value="interest.volunteer">
+              <option
+                v-for="interest in interests"
+                :key="interest.id"
+                :value="interest.volunteer"
+              >
                 {{ interest.volunteer }}
               </option>
             </select>
@@ -151,17 +126,33 @@
 
           <div class="form-group">
             <label for="message">Message</label>
-            <textarea id="message" rows="5" v-model="formData.message" ></textarea>
+            <textarea
+              id="message"
+              rows="5"
+              v-model="formData.message"
+            ></textarea>
           </div>
 
-          <button :class="{'flower-animation':submitted || isProcessing, 'button':true}" type="submit" class="submit-button">
+          <button
+            :class="{'flower-animation':submitted || isProcessing, 'button':true}"
+            type="submit"
+            class="submit-button"
+          >
             <div class="container">
-              <img v-if="submitted || isProcessing" :src="flower_animation" alt="Processing" id="flower-animation" />
+              <img
+                v-if="submitted || isProcessing"
+                :src="flower_animation"
+                alt="Processing"
+                id="flower-animation"
+              />
               <span v-else>{{buttonText}}</span>
             </div>
           </button>
 
-          <div class="error-messages" v-if="Object.values(errors).some(error => error)">
+          <div
+            class="error-messages"
+            v-if="Object.values(errors).some(error => error)"
+          >
             <ul>
               <li v-if="errors.name">{{ errors.name }}</li>
               <li v-if="errors.email">{{ errors.email }}</li>
@@ -169,14 +160,13 @@
               <li v-if="errors.message">{{ errors.message }}</li>
             </ul>
           </div>
-          
+
           <div v-if="responseMessage" class="success-message">
             {{responseMessage}}
           </div>
-
         </form>
       </section>
-       <!-- VUE CONTACT FORM END -->
+      <!-- VUE CONTACT FORM END -->
     </main>
 
     <!-- Footer -->
@@ -233,7 +223,5 @@
         <p>Designed with <i class="fa fa-heart"></i> by M.A.A.K.E</p>
       </div>
     </footer>
-
-  
   </body>
 </html>

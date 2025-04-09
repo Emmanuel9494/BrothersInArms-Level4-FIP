@@ -3,7 +3,7 @@
 .contact-header {
   background: linear-gradient(a.$overlayDark, a.$overlayDark),
     url("../images/contact-bg.jpg") no-repeat center center/cover;
-    color: a.$white;
+  color: a.$white;
 }
 
 .contact-main {
@@ -27,10 +27,10 @@
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(10px);
-  p{
+  p {
     color: a.$white;
-  font-family: a.$secondaryFont;
-  font-weight: 400;
+    font-family: a.$secondaryFont;
+    font-weight: 400;
   }
 }
 
@@ -48,7 +48,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 1.25rem;
-  p{
+  p {
     color: a.$white;
     font-family: a.$secondaryFont;
     font-weight: 200;
@@ -59,12 +59,12 @@
     color: a.$gold;
     font-size: 1.25rem;
   }
-  
+
   a {
     color: a.$white;
     transition: color 0.2s ease;
     text-decoration: none;
-    
+
     &:hover {
       color: a.$gold;
     }
@@ -75,12 +75,12 @@
   display: flex;
   gap: 1.25rem;
   margin-top: 2rem;
-  
+
   .social-icon {
     color: a.$lightGray;
     font-size: 1.5rem;
     transition: color 0.2s ease;
-    
+
     &:hover {
       color: a.$gold;
     }
@@ -89,7 +89,6 @@
 
 .donate-button {
   display: inline-block;
-  // margin-top: 2rem;
   padding: 0.875rem 2rem;
   background-color: a.$burgundy;
   color: a.$white;
@@ -98,7 +97,7 @@
   font-weight: 600;
   text-decoration: none;
   transition: all 0.2s ease;
-  
+
   &:hover {
     background-color: darken(a.$burgundy, 10%);
     transform: translateY(-1px);
@@ -108,14 +107,14 @@
 .contact-form {
   .form-group {
     margin-bottom: 1.5rem;
-    
+
     label {
       display: block;
       margin-bottom: 0.75rem;
       color: a.$gold;
       font-weight: 500;
     }
-    
+
     input,
     textarea,
     select {
@@ -124,28 +123,27 @@
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 6px;
       background: rgba(255, 255, 255, 0.05);
-      // color: a.$white;
       color: red;
       font-size: 1rem;
       transition: all 0.2s ease;
-      
+
       &::placeholder {
         color: a.$mediumGray;
       }
-      
+
       &:focus {
         outline: none;
         border-color: a.$gold;
         background: rgba(255, 255, 255, 0.08);
       }
     }
-    
+
     textarea {
       min-height: 120px;
       resize: vertical;
     }
   }
-  
+
   .submit-button {
     width: 100%;
     padding: 1rem;
@@ -158,12 +156,12 @@
     font-size: 1rem;
     letter-spacing: 0.5px;
     transition: all 0.2s ease;
-    
+
     &:hover {
       background-color: darken(a.$burgundy, 10%);
       transform: translateY(-1px);
     }
-    
+
     &:active {
       transform: translateY(0);
     }
@@ -175,41 +173,40 @@
     background: mediumseagreen;
     border-radius: 50%;
     transform: rotate(-180deg);
-}
-
-.container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  font-size: 2.25rem;
-}
-
-.success-message {
-  color: a.$gold;
-  font-size: 1.25rem;
-  font-weight: 600;
-  text-align: center;
-}
-
-.error-messages li {
-  color: a.$gold;
-  font-size: 1.25rem;
-  font-weight: 600;
-  // text-align: center;
-}
-
-#flower-animation {
-  position: absolute;
-  top: 30px;
-  left: -30%;
-  transform: translate(50%, -50%);
- 
-  img{
-    width: 100%;
-    height: 100%;
   }
-}
 
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-size: 2.25rem;
+  }
+
+  .success-message {
+    color: a.$gold;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .error-messages li {
+    color: a.$gold;
+    font-size: 1.25rem;
+    font-weight: 600;
+    // text-align: center;
+  }
+
+  #flower-animation {
+    position: absolute;
+    top: 30px;
+    left: -30%;
+    transform: translate(50%, -50%);
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }

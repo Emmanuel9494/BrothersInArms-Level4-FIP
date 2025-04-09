@@ -1,5 +1,4 @@
 export function donors() {
-  // GSAP Animations for Donors Page
   console.log("donors animation is called");
 
   gsap.from(".donors-intro", {

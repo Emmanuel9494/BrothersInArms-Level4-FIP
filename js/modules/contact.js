@@ -1,5 +1,4 @@
 export function contact() {
-  // GSAP Animations
   gsap.from(".contact-info", {
     duration: 1,
     opacity: 0,

@@ -17,25 +17,12 @@
     font-family: a.$primaryFont;
     font-weight: lighter;
     color: a.$mediumGray;
-
-    // &::after {
-    //   content: '';
-    //   position: absolute;
-    //   bottom: -0.5rem;
-    //   left: 50%;
-    //   transform: translateX(-50%);
-    //   width: 90px;
-    //   height: 3px;
-    //   background-color: rgba(128, 0, 32, 0.753);
-    //   border-radius: 2px;
-    // }
   }
   h3,
   h5 {
     color: a.$navy;
   }
   h5 {
-    // font-size: .8rem;
     font-weight: lighter;
     font-family: a.$secondaryFont;
   }
@@ -64,7 +51,7 @@
     }
 
     p {
-      display: none; // Initially hidden, shown in the lightbox
+      display: none;
       font-size: 1rem;
       margin-top: 15px;
       line-height: 1.6;
@@ -91,7 +78,6 @@
     padding: 20px;
     border-radius: 10px;
     width: 90%;
-    // max-width: 500px;
     position: relative;
 
     img {
@@ -142,7 +128,6 @@
   }
 
   .story {
-    // display: flex;
     align-items: center;
     justify-content: space-between;
     text-align: left;
@@ -150,8 +135,6 @@
     margin: 30px 0;
 
     img {
-      // width: 45%;
-      // max-width: 400px;
       max-width: 100%;
       height: auto;
     }
@@ -175,7 +158,6 @@
   }
 
   .story {
-    // display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
   }
@@ -189,19 +171,3 @@
     max-width: 700px;
   }
 }
-
-// @media screen and (min-width: 1200px) {
-//   h1 {
-//     font-size: 40px;
-//   }
-
-//   h2 {
-//     font-size: 20px;
-//     margin: 20px 0;
-//   }
-
-//   h3 {
-//     font-size: 16px;
-//     margin: 20px 0;
-//   }
-// }
