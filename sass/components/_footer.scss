@@ -5,7 +5,6 @@ footer {
   background-color: a.$mediumGray;
   color: a.$white;
   padding: 4rem 0 2rem;
-  // font-family: "Libre Baskerville", serif;
 
   .footer-content {
     display: flex;
@@ -21,7 +20,7 @@ footer {
       margin: 1.5rem 0;
 
       &.about {
-        text-align: center; // Center align the content in the "about" section
+        text-align: center;
 
         #logo-footer {
           display: flex;
@@ -192,11 +191,6 @@ footer {
             color: a.$white;
           }
         }
-
-        // &.links ul li {
-        //   text-align: left;
-        //   padding: 0 30%;
-        // }
 
         &.social {
           h4 {

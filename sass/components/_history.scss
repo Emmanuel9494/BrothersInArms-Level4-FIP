@@ -38,10 +38,6 @@
 
   .conflict-history {
     .timeline {
-      // display: flex;
-      // flex-direction: column;
-      // gap: 1.5rem;
-
       .timeline-item {
         background: a.$lightGray;
         padding: 1.5rem;
@@ -141,7 +137,6 @@
         p {
           font-family: "Caveat", cursive;
           font-weight: 200;
-          // font-size: x-small;
           color: a.$navy;
         }
       }

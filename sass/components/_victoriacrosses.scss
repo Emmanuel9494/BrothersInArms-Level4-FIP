@@ -4,8 +4,8 @@
   background: linear-gradient(a.$overlayDark, a.$overlayDark),
     url("../images/victoriacrosses-bg.jpg") no-repeat center center/cover;
 }
-.content-wrapper{
-  h4{
+.content-wrapper {
+  h4 {
     color: a.$navy;
   }
 }
@@ -49,12 +49,10 @@
     .image-container {
       text-align: center;
       margin-top: 2rem;
-      // display: flex;
       flex-wrap: wrap;
       gap: 1.5rem;
 
       .vc-image-card {
-        // flex: 0 0 calc(30% - 1.2rem);
         text-align: center;
         margin: 0 1rem;
         .vc-image {
@@ -79,12 +77,6 @@
           margin-top: 0.5rem;
         }
       }
-
-      // @media (max-width: 768px) {
-      //   .vc-image-card {
-      //     // flex: 0 0 calc(50% - 0.75rem);
-      //   }
-      // }
     }
 
     .recipient-list {
@@ -167,7 +159,6 @@
   background: a.$lightGray;
   border-top: 1px solid a.$gold;
   margin-top: 2rem;
-  
 
   blockquote {
     color: a.$gold;

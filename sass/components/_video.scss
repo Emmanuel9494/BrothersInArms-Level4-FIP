@@ -22,18 +22,6 @@
     font-family: a.$primaryFont;
     font-weight: lighter;
     color: a.$mediumGray;
-
-    // &::after {
-    //   content: '';
-    //   position: absolute;
-    //   bottom: -0.5rem;
-    //   left: 50%;
-    //   transform: translateX(-50%);
-    //   width: 90px;
-    //   height: 3px;
-    //   background-color: a.$burgundy;
-    //   border-radius: 2px;
-    // }
   }
 }
 
@@ -44,9 +32,9 @@
   box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.5);
   background-color: a.$navy;
   position: relative;
-  
+
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
