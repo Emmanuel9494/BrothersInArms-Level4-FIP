@@ -25,7 +25,7 @@
   }
 }
 
-#player-container {
+.player-container {
   margin: 2rem auto;
   border-radius: 8px;
   overflow: hidden;
@@ -42,5 +42,28 @@
     height: 4px;
     background: linear-gradient(to right, a.$burgundy, a.$gold);
     z-index: 1;
+  }
+}
+
+.video-mobile {
+  display: block;
+}
+
+.video-wedpage {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .video-mobile {
+    display: none;
+  }
+
+  .video-wedpage {
+    display: block;
+
+    video {
+      width: 100%;
+      height: auto;
+    }
   }
 }
